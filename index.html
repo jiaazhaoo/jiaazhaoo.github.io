@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jia Zhao</title>
-  <meta name="description" content="Jia Zhao — data engineer working at the intersection of urban planning and data. Projects, writing, and contact." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <title>Jia Zhao — AI Workflow Builder</title>
+  <meta name="description" content="Jia Zhao — I build AI workflows and automations on top of a real data-engineering backbone. Selected work, stack, and background." />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>" />
 </head>
 <body>
   <!-- ===================== HEADER / IDENTITY ===================== -->
@@ -16,17 +15,17 @@
     <div class="masthead-text">
       <h1>Jia Zhao</h1>
       <p class="tagline">
-        <!-- TODO: one-line identity. Keep it concrete. -->
-        Data engineer working at the intersection of <strong>urban planning</strong> and <strong>data</strong>.
-        I build pipelines that turn messy spatial &amp; document data into things people can actually use.
+        <!-- TODO: one-line identity. This is the whole pitch — keep it concrete. -->
+        I&nbsp;build <strong>AI workflows &amp; automations</strong> — agents, RAG systems, and document
+        pipelines — on top of a real <strong>data-engineering</strong> backbone, so they hold up on
+        messy, real-world data instead of just demos.
       </p>
       <nav class="links">
         <a href="mailto:zhaojia789456@gmail.com">Email</a>
         <a href="https://github.com/jiaazhaoo">GitHub</a>
-        <!-- TODO: add / remove links as needed -->
-        <a href="#" data-todo>Scholar</a>
+        <!-- TODO: add / remove links. LinkedIn + a résumé PDF are what interviewers click. -->
         <a href="#" data-todo>LinkedIn</a>
-        <a href="#" data-todo>Twitter/X</a>
+        <a href="#" data-todo>Résumé (PDF)</a>
       </nav>
     </div>
   </header>
@@ -35,90 +34,98 @@
     <!-- ===================== ABOUT ===================== -->
     <section id="about">
       <p>
-        <!-- TODO: 2–4 sentences, first person, plain language. What do you do, what are you into. -->
-        I&nbsp;work on data engineering for the built environment — geospatial pipelines, OCR of planning
-        documents, and turning fragmented urban datasets into clean, queryable layers. My background in
-        <strong>urban planning</strong> means I care as much about what the data <em>means</em> as how it moves.
+        <!-- TODO: 2–4 sentences, first person. Lead with what makes you different. -->
+        I&nbsp;design and ship AI-powered workflows that turn manual, document-heavy processes into
+        systems that run themselves. What sets my builds apart is the foundation underneath: an
+        <strong>actual data-engineering background</strong> — OCR pipelines, geospatial processing,
+        ETL — so the automations survive contact with dirty, inconsistent, production data.
       </p>
       <p>
-        <!-- TODO: optional second paragraph — current focus, what you're learning, what you want to work on. -->
-        Right now I&nbsp;am focused on <span data-todo>[current focus]</span>. Previously
-        <span data-todo>[a line of background]</span>.
+        <!-- TODO: optional — domain angle, what you're focused on, what you want to work on next. -->
+        My sweet spot is the <span data-todo>[planning / real-estate / GIS]</span> domain, where the
+        data is messy and the manual work is expensive. Right now I&nbsp;am focused on
+        <span data-todo>[current focus]</span>.
       </p>
     </section>
 
-    <!-- ===================== NOW / NEWS ===================== -->
-    <section id="now">
-      <h2>Now</h2>
-      <ul class="news">
-        <!-- TODO: most recent first. Delete this section if you don't want it. -->
-        <li><span class="date">2026</span> <span data-todo>Started / shipped / joined …</span></li>
-        <li><span class="date">2025</span> <span data-todo>An earlier update …</span></li>
+    <!-- ===================== WHAT I BUILD ===================== -->
+    <section id="build">
+      <h2>What I build</h2>
+      <ul class="capabilities">
+        <!-- TODO: keep the ones that are true for you, cut the rest. -->
+        <li><strong>AI agents &amp; assistants</strong> — task-specific agents that read, decide, and act.</li>
+        <li><strong>RAG knowledge bases</strong> — chat over SOPs, policies, and internal documents.</li>
+        <li><strong>Document processing</strong> — OCR &amp; extraction from scans into clean, structured data.</li>
+        <li><strong>Geospatial &amp; data pipelines</strong> — ingest, normalize, and serve messy spatial data.</li>
+        <li><strong>Workflow automation</strong> — n8n / Make / Zapier flows that remove manual steps.</li>
+        <li><strong>Integrations</strong> — wiring LLMs into CRMs, databases, and existing tools.</li>
       </ul>
     </section>
 
-    <!-- ===================== PROJECTS (the front door) ===================== -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <p class="section-note">The work is the résumé. Ordered by what I&nbsp;am proudest of.</p>
+    <!-- ===================== STACK ===================== -->
+    <section id="stack">
+      <h2>Stack</h2>
+      <!-- TODO: prune to what you actually use. Badges are just text, no logos to load. -->
+      <div class="badges">
+        <span class="badge">n8n</span>
+        <span class="badge">Make</span>
+        <span class="badge">Zapier</span>
+        <span class="badge">Claude</span>
+        <span class="badge">OpenAI</span>
+        <span class="badge">LangChain</span>
+        <span class="badge">Python</span>
+        <span class="badge">Supabase</span>
+        <span class="badge">Postgres / PostGIS</span>
+        <span class="badge">GDAL</span>
+        <span class="badge" data-todo>…</span>
+      </div>
+    </section>
+
+    <!-- ===================== SELECTED WORK (case studies, outcome-first) ===================== -->
+    <section id="work">
+      <h2>Selected work</h2>
+      <p class="section-note">Framed by outcome, not tooling — the way an interviewer reads it.</p>
 
       <article class="project">
-        <h3>
-          <a href="#" data-todo>Geospatial Pipeline</a>
-        </h3>
+        <h3>Document knowledge base for a <span data-todo>[org type]</span></h3>
         <p>
-          <!-- TODO: what it does, why it's interesting, your role, the stack. 2–3 sentences. -->
-          An ETL pipeline that ingests fragmented municipal spatial datasets, normalizes projections and
-          schemas, and serves clean, queryable layers. <span data-todo>[scale / impact — e.g. N cities, M records]</span>.
+          <!-- TODO: 1) the pain, 2) what you built, 3) the result number. -->
+          Staff were searching hundreds of scanned SOPs and policy PDFs by hand. I&nbsp;built an
+          OCR&nbsp;→ RAG pipeline that made every document instantly searchable and answerable in
+          natural language.
         </p>
+        <p class="metric"><strong data-todo>Search time cut ~50% · 15+ hours/week saved</strong></p>
+        <p class="stack">OCR · RAG · Python · <span data-todo>vector DB</span></p>
+      </article>
+
+      <article class="project">
+        <h3>Geospatial data pipeline</h3>
+        <p>
+          <!-- TODO -->
+          Fragmented municipal spatial datasets — mismatched projections, schemas, formats — were
+          unusable without days of manual cleanup. I&nbsp;built an ETL pipeline that normalizes and
+          serves them as clean, queryable layers.
+        </p>
+        <p class="metric"><strong data-todo>Processed [N] datasets · manual prep from days → minutes</strong></p>
         <p class="stack">Python · PostGIS · GDAL · <span data-todo>…</span></p>
       </article>
 
       <article class="project">
-        <h3>
-          <a href="#" data-todo>Planning-Document OCR</a>
-        </h3>
+        <h3>Lead / intake automation</h3>
         <p>
-          <!-- TODO -->
-          Extracts structured tables and text from scanned zoning &amp; planning documents, with a review loop
-          for low-confidence fields. <span data-todo>[what problem it solved / for whom]</span>.
+          <!-- TODO: add or remove case studies freely. Every one should end in a number. -->
+          <span data-todo>[The manual process → what you automated → the outcome.]</span>
         </p>
-        <p class="stack">Python · OCR · <span data-todo>…</span></p>
-      </article>
-
-      <article class="project">
-        <h3>
-          <a href="#" data-todo>Project Three</a>
-        </h3>
-        <p>
-          <!-- TODO: add or remove project blocks freely. -->
-          <span data-todo>[Short description.]</span>
-        </p>
-        <p class="stack"><span data-todo>Stack …</span></p>
+        <p class="metric"><strong data-todo>[the result, in numbers]</strong></p>
+        <p class="stack"><span data-todo>n8n · Make · …</span></p>
       </article>
     </section>
 
-    <!-- ===================== WRITING (optional) ===================== -->
-    <section id="writing">
-      <h2>Writing</h2>
-      <ul class="posts">
-        <!-- TODO: blog posts / notes. Delete section if you have none yet. -->
-        <li>
-          <a href="#" data-todo>A post title</a>
-          <span class="date">2026</span>
-        </li>
-        <li>
-          <a href="#" data-todo>Another post</a>
-          <span class="date">2025</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ===================== EXPERIENCE (optional, keep short) ===================== -->
+    <!-- ===================== EXPERIENCE ===================== -->
     <section id="experience">
       <h2>Experience</h2>
       <ul class="cv">
-        <!-- TODO: keep it terse. Link to a full CV/PDF instead of listing everything. -->
+        <!-- TODO: keep terse. Title + org + span; details live on the résumé PDF. -->
         <li>
           <span class="role" data-todo>Role, Organization</span>
           <span class="date">2024 — now</span>
@@ -128,7 +135,16 @@
           <span class="date">2022 — 2024</span>
         </li>
       </ul>
-      <p class="section-note"><a href="#" data-todo>Full CV (PDF) →</a></p>
+    </section>
+
+    <!-- ===================== INTERESTS (for the human across the table) ===================== -->
+    <section id="interests">
+      <h2>Beyond work</h2>
+      <p>
+        <!-- TODO: 1–2 sentences. Interviewers are people; give them something real to open with. -->
+        <span data-todo>[What you're into outside of building — a hobby, a side project, a thing you
+        nerd out on. Keep it genuine, one or two lines.]</span>
+      </p>
     </section>
   </main>
 
@@ -137,7 +153,7 @@
       <a href="mailto:zhaojia789456@gmail.com">zhaojia789456@gmail.com</a>
       · <a href="https://github.com/jiaazhaoo">github.com/jiaazhaoo</a>
     </p>
-    <p class="colophon">Built plainly. Last updated <span data-todo>2026</span>.</p>
+    <p class="colophon">Last updated <span data-todo>2026</span>.</p>
   </footer>
 
   <script src="script.js"></script>

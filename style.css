@@ -113,6 +113,54 @@ h2 {
   margin-top: -0.3rem;
 }
 
+/* ---------- What I build (capabilities) ---------- */
+.capabilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1.6rem;
+}
+.capabilities li {
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  padding-left: 0.9rem;
+  position: relative;
+}
+.capabilities li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent-dim);
+}
+.capabilities strong { color: var(--ink); }
+
+/* ---------- Stack badges ---------- */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.badge {
+  font-size: 0.82rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: var(--ink-soft);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.15rem 0.55rem;
+  white-space: nowrap;
+}
+
+/* ---------- Outcome metric line ---------- */
+.metric {
+  margin: 0.35rem 0 !important;
+  color: var(--accent) !important;
+  font-size: 0.95rem;
+}
+.metric strong { color: var(--accent); font-weight: 650; }
+
 /* ---------- News / Now ---------- */
 .news, .posts, .cv {
   list-style: none;
@@ -186,4 +234,5 @@ footer p { margin: 0.3rem 0; }
   .avatar { width: 88px; height: 88px; }
   h1 { font-size: 1.65rem; }
   .posts li, .cv li { flex-direction: column; gap: 0.1rem; }
+  .capabilities { grid-template-columns: 1fr; }
 }
