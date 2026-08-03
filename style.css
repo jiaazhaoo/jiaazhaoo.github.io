@@ -87,6 +87,7 @@ h1 {
 }
 .links a { border-bottom: none; }
 .links a:hover { border-bottom: 1px solid var(--accent); }
+.locale { color: var(--muted); }
 
 /* ---------- Sections ---------- */
 section { margin: 2.5rem 0; }
