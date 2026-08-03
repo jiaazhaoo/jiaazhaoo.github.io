@@ -13,8 +13,6 @@
   --accent:     #9a3b2e;   /* restrained brick-red for links */
   --accent-dim: #c98c84;
   --rule:       #e6e6e6;
-  --todo-bg:    #fff6d6;
-  --todo-ink:   #8a6d00;
   --measure:    42rem;     /* readable line length */
 }
 
@@ -27,8 +25,6 @@
     --accent:     #e0897c;
     --accent-dim: #7d4b44;
     --rule:       #2c2c26;
-    --todo-bg:    #33301c;
-    --todo-ink:   #d8c88a;
   }
 }
 
@@ -217,15 +213,6 @@ footer {
 }
 footer p { margin: 0.3rem 0; }
 .colophon { font-size: 0.82rem; }
-
-/* ---------- TODO markers (visible only to you while editing) ---------- */
-[data-todo] {
-  background: var(--todo-bg);
-  color: var(--todo-ink);
-  border-radius: 3px;
-  padding: 0 0.2em;
-  border-bottom: none;
-}
 
 /* ---------- Responsive ---------- */
 @media (max-width: 480px) {

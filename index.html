@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jia Zhao — AI Workflow Builder</title>
-  <meta name="description" content="Jia Zhao — I build AI workflows and automations on top of a real data-engineering backbone. Selected work, stack, and background." />
+  <title>Jia Zhao — Geospatial Data Engineer</title>
+  <meta name="description" content="Jia Zhao — I turn messy real-world spatial data (scanned documents, fragmented open datasets, free-text addresses) into structured, queryable geography — and then into products." />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>" />
 </head>
 <body>
   <!-- ===================== HEADER / IDENTITY ===================== -->
@@ -15,17 +15,13 @@
     <div class="masthead-text">
       <h1>Jia Zhao</h1>
       <p class="tagline">
-        <!-- TODO: one-line identity. This is the whole pitch — keep it concrete. -->
-        I&nbsp;build <strong>AI workflows &amp; automations</strong> — agents, RAG systems, and document
-        pipelines — on top of a real <strong>data-engineering</strong> backbone, so they hold up on
-        messy, real-world data instead of just demos.
+        I&nbsp;turn <strong>messy real-world spatial data</strong> — scanned paper records, fragmented
+        open datasets, free-text addresses — into <strong>structured, queryable geography</strong>,
+        and then into products people can actually use.
       </p>
       <nav class="links">
         <a href="mailto:zhaojia789456@gmail.com">Email</a>
         <a href="https://github.com/jiaazhaoo">GitHub</a>
-        <!-- TODO: add / remove links. LinkedIn + a résumé PDF are what interviewers click. -->
-        <a href="#" data-todo>LinkedIn</a>
-        <a href="#" data-todo>Résumé (PDF)</a>
       </nav>
     </div>
   </header>
@@ -34,17 +30,18 @@
     <!-- ===================== ABOUT ===================== -->
     <section id="about">
       <p>
-        <!-- TODO: 2–4 sentences, first person. Lead with what makes you different. -->
-        I&nbsp;design and ship AI-powered workflows that turn manual, document-heavy processes into
-        systems that run themselves. What sets my builds apart is the foundation underneath: an
-        <strong>actual data-engineering background</strong> — OCR pipelines, geospatial processing,
-        ETL — so the automations survive contact with dirty, inconsistent, production data.
+        I&nbsp;work on UK property and planning geography: taking a scanned decision notice or a
+        single line of free-text address and resolving it all the way down to a coordinate, a parcel
+        polygon, and the planning history attached to it. The hard part is never the happy path —
+        it&nbsp;is the 20% where the OCR is smudged, the address matches three towns, the survey point
+        lands in a shared yard instead of the building, and the upstream dataset is simply wrong.
       </p>
       <p>
-        <!-- TODO: optional — domain angle, what you're focused on, what you want to work on next. -->
-        My sweet spot is the <span data-todo>[planning / real-estate / GIS]</span> domain, where the
-        data is messy and the manual work is expensive. Right now I&nbsp;am focused on
-        <span data-todo>[current focus]</span>.
+        I&nbsp;build the boring infrastructure that survives that: measured thresholds instead of
+        guessed ones, stable module contracts, documented failure modes, and honest confidence scores
+        that say <em>&ldquo;low&rdquo;</em> when the evidence is thin. LLMs get used where they earn
+        their place — and deliberately removed where a rule and a threshold do the job more cheaply
+        and more predictably.
       </p>
     </section>
 
@@ -52,72 +49,123 @@
     <section id="build">
       <h2>What I build</h2>
       <ul class="capabilities">
-        <!-- TODO: keep the ones that are true for you, cut the rest. -->
-        <li><strong>AI agents &amp; assistants</strong> — task-specific agents that read, decide, and act.</li>
-        <li><strong>RAG knowledge bases</strong> — chat over SOPs, policies, and internal documents.</li>
-        <li><strong>Document processing</strong> — OCR &amp; extraction from scans into clean, structured data.</li>
-        <li><strong>Geospatial &amp; data pipelines</strong> — ingest, normalize, and serve messy spatial data.</li>
-        <li><strong>Workflow automation</strong> — n8n / Make / Zapier flows that remove manual steps.</li>
-        <li><strong>Integrations</strong> — wiring LLMs into CRMs, databases, and existing tools.</li>
+        <li><strong>Address &rarr; coordinate &rarr; parcel</strong> — gazetteer matching, confidence scoring, polygon derivation.</li>
+        <li><strong>Document pipelines</strong> — scanned records through OCR into structured, geocoded rows.</li>
+        <li><strong>Open-data fusion</strong> — OSM, LiDAR, UPRN, EPC, footfall joined into one evidence layer.</li>
+        <li><strong>Spatial ML</strong> — trained merge, ranking and reranking models over geometry features.</li>
+        <li><strong>WebGIS front ends</strong> — vector tiles and interactive maps over half a million features.</li>
+        <li><strong>Shipped products</strong> — from data pipeline to App Store listing, end to end.</li>
       </ul>
     </section>
 
     <!-- ===================== STACK ===================== -->
     <section id="stack">
       <h2>Stack</h2>
-      <!-- TODO: prune to what you actually use. Badges are just text, no logos to load. -->
       <div class="badges">
-        <span class="badge">n8n</span>
-        <span class="badge">Make</span>
-        <span class="badge">Zapier</span>
-        <span class="badge">Claude</span>
-        <span class="badge">OpenAI</span>
-        <span class="badge">LangChain</span>
         <span class="badge">Python</span>
+        <span class="badge">geopandas</span>
+        <span class="badge">Shapely</span>
+        <span class="badge">scikit-learn</span>
+        <span class="badge">FastAPI</span>
+        <span class="badge">PostgreSQL / PostGIS</span>
+        <span class="badge">SQLite</span>
+        <span class="badge">TypeScript</span>
+        <span class="badge">React</span>
+        <span class="badge">Next.js</span>
+        <span class="badge">MapLibre GL</span>
+        <span class="badge">Leaflet</span>
+        <span class="badge">Mapbox</span>
+        <span class="badge">tippecanoe</span>
+        <span class="badge">Swift / SwiftUI</span>
         <span class="badge">Supabase</span>
-        <span class="badge">Postgres / PostGIS</span>
-        <span class="badge">GDAL</span>
-        <span class="badge" data-todo>…</span>
+        <span class="badge">OS Data Hub</span>
+        <span class="badge">OCR</span>
+        <span class="badge">QGIS</span>
+        <span class="badge">R</span>
       </div>
     </section>
 
     <!-- ===================== SELECTED WORK (case studies, outcome-first) ===================== -->
     <section id="work">
       <h2>Selected work</h2>
-      <p class="section-note">Framed by outcome, not tooling — the way an interviewer reads it.</p>
+      <p class="section-note">Framed by outcome. Every number below is measured, not estimated.</p>
 
       <article class="project">
-        <h3>Document knowledge base for a <span data-todo>[org type]</span></h3>
+        <h3>Address &rarr; parcel &rarr; planning history, as one web service</h3>
         <p>
-          <!-- TODO: 1) the pain, 2) what you built, 3) the result number. -->
-          Staff were searching hundreds of scanned SOPs and policy PDFs by hand. I&nbsp;built an
-          OCR&nbsp;→ RAG pipeline that made every document instantly searchable and answerable in
-          natural language.
+          Type one line of free-text UK address; get back a derived parcel polygon on an
+          EPSG:27700-native map, plus only the planning applications that actually fall inside it.
+          Filtering by postcode alone returns everything on the street — the spatial filter is what
+          makes the answer useful.
         </p>
-        <p class="metric"><strong data-todo>Search time cut ~50% · 15+ hours/week saved</strong></p>
-        <p class="stack">OCR · RAG · Python · <span data-todo>vector DB</span></p>
+        <p>
+          Two fixes mattered most. A search-scope reasoner that walks the address backwards to pin
+          the right town lifted one industrial-estate address from a match <em>600&nbsp;km away in
+          Scotland</em> to the correct unit. And a survey-point-quality check caught cases where the
+          official point lands in a shared yard, snapping the result off a 1.8&nbsp;m sliver and onto
+          the actual building.
+        </p>
+        <p class="metric"><strong>Planning noise 315&nbsp;&rarr;&nbsp;2 · sliver 149.6&nbsp;m² (0.06 compactness) &rarr; building 261.3&nbsp;m² (0.73) · 35 tests green, zero regressions</strong></p>
+        <p class="stack">FastAPI · Leaflet + Proj4 · OS Places / Features WFS / Maps WMTS · EPSG:27700</p>
       </article>
 
       <article class="project">
-        <h3>Geospatial data pipeline</h3>
+        <h3>Scanned paper records &rarr; geocoded parcels, in production</h3>
         <p>
-          <!-- TODO -->
-          Fragmented municipal spatial datasets — mismatched projections, schemas, formats — were
-          unusable without days of manual cleanup. I&nbsp;built an ETL pipeline that normalizes and
-          serves them as clean, queryable layers.
+          A production line for statutory land and planning records held by UK local authorities:
+          raw scan preprocessing, document classification, OCR, extraction of the site address and
+          decision date, geocoding to a national grid coordinate, then derivation of the parcel
+          polygon from Ordnance Survey topography.
         </p>
-        <p class="metric"><strong data-todo>Processed [N] datasets · manual prep from days → minutes</strong></p>
-        <p class="stack">Python · PostGIS · GDAL · <span data-todo>…</span></p>
+        <p>
+          Built council-agnostic on purpose. Area-specific resources resolve through a profile object,
+          so onboarding a new authority means adding configuration, not branching the algorithms —
+          enforced by a written module boundary with stable input and output contracts.
+        </p>
+        <p class="metric"><strong>One address in &rarr; zero or one polygon out · new council = config, not code</strong></p>
+        <p class="stack">Python · geopandas · scikit-learn · OCR · OS MasterMap WFS</p>
       </article>
 
       <article class="project">
-        <h3>Lead / intake automation</h3>
+        <h3>London Street Personality Map</h3>
         <p>
-          <!-- TODO: add or remove case studies freely. Every one should end in a number. -->
-          <span data-todo>[The manual process → what you automated → the outcome.]</span>
+          A map-first read of what every street in Greater London is actually <em>for</em> — daily
+          consumption, nightlife, office, transit gateway, industrial, regeneration — inferred from
+          buildings, POIs, transport and footfall, then explained back to the user with its own
+          evidence, confidence and risk notes.
         </p>
-        <p class="metric"><strong data-todo>[the result, in numbers]</strong></p>
-        <p class="stack"><span data-todo>n8n · Make · …</span></p>
+        <p>
+          Built entirely on free and open data. Paid sources are excluded by design, which forced
+          the interesting work: filling building-height gaps from Environment Agency LiDAR, and
+          inferring residential subtypes conservatively from UPRN density, footprint area and height
+          rather than trusting a single tag.
+        </p>
+        <p class="metric"><strong>572,891 street segments · 12 street types · 95.6% measured building heights, 128 missing</strong></p>
+        <p class="stack">TypeScript · React · MapLibre GL · tippecanoe · OSM / LiDAR / UPRN / EPC / TfL</p>
+      </article>
+
+      <article class="project">
+        <h3>Neatos — on-device photo organizer (iOS)</h3>
+        <p>
+          Search a photo library by what is <em>in</em> the photos, including the text inside
+          screenshots. Auto-sorts by theme, people and place; smart folders learn from a handful of
+          examples; suggested deletions reclaim space. Every kind of analysis — content, text, faces,
+          locations — runs on the device. Nothing is ever uploaded, and there is no account.
+        </p>
+        <p class="metric"><strong>Built solo and taken to App Store submission: pipeline, UI, IAP, store copy</strong></p>
+        <p class="stack">Swift · SwiftUI · Vision · StoreKit</p>
+      </article>
+
+      <article class="project">
+        <h3>Airbnb host commercialization, mapped</h3>
+        <p>
+          Where does short-let commercialization actually concentrate, and how has it moved? A
+          reusable collector pulls Inside&nbsp;Airbnb data for any city into PostgreSQL — fuzzy city
+          matching, resumable downloads, host-level aggregation — and an interactive map classifies
+          hosts into five commercialization tiers and animates them over time.
+        </p>
+        <p class="metric"><strong>Live at geonarvis.com · packaged collector, not a notebook · grew out of my MSc dissertation</strong></p>
+        <p class="stack">Python · PostgreSQL · Mapbox GL · custom Mapbox Studio basemap</p>
       </article>
     </section>
 
@@ -125,14 +173,13 @@
     <section id="experience">
       <h2>Experience</h2>
       <ul class="cv">
-        <!-- TODO: keep terse. Title + org + span; details live on the résumé PDF. -->
         <li>
-          <span class="role" data-todo>Role, Organization</span>
-          <span class="date">2024 — now</span>
+          <span class="role">Geospatial Data Engineer, RMSI (UK)</span>
+          <span class="date">2026 — now</span>
         </li>
         <li>
-          <span class="role" data-todo>Earlier role, Organization</span>
-          <span class="date">2022 — 2024</span>
+          <span class="role">MSc, Geographic Data Science</span>
+          <span class="date">2023 — 2025</span>
         </li>
       </ul>
     </section>
@@ -141,9 +188,11 @@
     <section id="interests">
       <h2>Beyond work</h2>
       <p>
-        <!-- TODO: 1–2 sentences. Interviewers are people; give them something real to open with. -->
-        <span data-todo>[What you're into outside of building — a hobby, a side project, a thing you
-        nerd out on. Keep it genuine, one or two lines.]</span>
+        Most of my side projects start as something that annoyed me. A browser extension because my
+        saved posts were scattered across a dozen apps. A photo organizer because my camera roll had
+        become unsearchable. A site that ranks live cameras by weather so I can find a good sunset
+        somewhere on the planet right now. None of them were meant to be portfolio pieces — they just
+        turned out to be the most honest evidence of how I work.
       </p>
     </section>
   </main>
@@ -153,7 +202,7 @@
       <a href="mailto:zhaojia789456@gmail.com">zhaojia789456@gmail.com</a>
       · <a href="https://github.com/jiaazhaoo">github.com/jiaazhaoo</a>
     </p>
-    <p class="colophon">Last updated <span data-todo>2026</span>.</p>
+    <p class="colophon">Last updated August 2026.</p>
   </footer>
 
   <script src="script.js"></script>
