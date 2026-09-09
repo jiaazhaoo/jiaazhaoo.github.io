@@ -1,23 +1,17 @@
-/* Minimal by design. A page like this barely needs JS —
-   the content is the point. Two small niceties only. */
+/* Minimal by design — the content is the point.
+   Two small niceties, both of which degrade to nothing. */
 
-// 1. Smooth-scroll for in-page anchors.
-document.querySelectorAll('a[href^="#"]').forEach((a) => {
-  a.addEventListener('click', (e) => {
-    const id = a.getAttribute('href');
-    if (id.length < 2) return;
-    const target = document.querySelector(id);
-    if (!target) return;
-    e.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
+// 1. Keep the footer year honest without editing the file each time.
+(function () {
+  var el = document.getElementById('updated');
+  if (el) el.textContent = String(new Date().getFullYear());
+})();
 
-// 2. Warn (only in the console) about links you still need to fill in,
-//    so an unfinished href never ships silently. Remove once done.
-window.addEventListener('DOMContentLoaded', () => {
-  const todos = document.querySelectorAll('[data-todo], a[href="#"]');
+// 2. Console-only reminder of what is still a placeholder, so an
+//    unfinished href never ships silently. Delete once the page is done.
+window.addEventListener('DOMContentLoaded', function () {
+  var todos = document.querySelectorAll('[data-todo], a[href="#"]');
   if (todos.length) {
-    console.info(`[page] ${todos.length} placeholder(s) still to fill in.`);
+    console.info('[page] ' + todos.length + ' placeholder(s) still to fill in.');
   }
 });
