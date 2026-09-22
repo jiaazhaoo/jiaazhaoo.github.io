@@ -1,297 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jia Zhao — AI workflows for document-heavy work</title>
-  <meta name="description" content="Jia Zhao builds AI workflows that read messy real-world documents — decades of council scans, hand-drawn site plans — and produce answers a professional can sign off on. Selected work, measured." />
-  <meta name="author" content="Jia Zhao" />
-  <meta property="og:title" content="Jia Zhao — AI workflows for document-heavy work" />
-  <meta property="og:description" content="AI workflows that read messy real-world documents and know when not to trust themselves. Selected work, measured." />
-  <meta property="og:type" content="profile" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◳</text></svg>" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jia Zhao — AI workflows for document-heavy work</title>
+<meta name="description" content="Jia Zhao builds AI workflows that read messy real-world documents — decades of council scans, hand-drawn site plans — and know when not to trust themselves." />
+<meta name="author" content="Jia Zhao" />
+<meta property="og:title" content="Jia Zhao — AI workflows for document-heavy work" />
+<meta property="og:description" content="AI workflows that read messy real-world documents and know when not to trust themselves." />
+<meta property="og:type" content="profile" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◳</text></svg>" />
 </head>
 <body>
 
-<!-- ============================ MASTHEAD ============================ -->
-<header class="masthead">
-  <h1>Jia Zhao</h1>
-  <p class="tagline">
-    I build <strong>AI workflows</strong> that read messy real-world documents — decades of council
-    scans, hand-drawn site plans — and produce answers a professional can sign off on.
-    Most of the engineering goes into knowing <em>when not to trust the model</em>.
-  </p>
-  <nav class="links" aria-label="Contact">
-    <a href="mailto:zhaojia789456@gmail.com">Email</a>
-    <a href="https://github.com/jiaazhaoo">GitHub</a>
-    <a href="#" data-todo>LinkedIn</a>
-    <a href="#" data-todo>CV (PDF)</a>
-  </nav>
+<!-- ======================= HERO ======================= -->
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Jia&nbsp;Zhao <span class="dot"></span> AI workflow engineer</p>
+    <h1>
+      I build AI workflows that read<br />
+      <em>messy</em> real-world documents.
+    </h1>
+    <p class="hero-lede">
+      Decades of council scans, hand-drawn site plans, forty-year-old legal notices —
+      turned into answers a professional can sign off on. Most of the engineering goes into
+      knowing <strong>when not to trust the model</strong>.
+    </p>
+    <nav class="hero-links" aria-label="Contact">
+      <a class="btn btn-primary" href="mailto:zhaojia789456@gmail.com">Email me</a>
+      <a class="btn" href="https://github.com/jiaazhaoo">GitHub</a>
+      <a class="btn" href="#" data-todo>LinkedIn</a>
+      <a class="btn" href="#" data-todo>CV</a>
+    </nav>
+  </div>
 </header>
+
+<!-- ======================= FIGURES ======================= -->
+<section class="figures" aria-label="Selected measurements">
+  <div class="wrap figures-grid">
+    <div class="figure">
+      <p class="figure-num">88<span class="unit">%</span></p>
+      <p class="figure-cap">correct in the top confidence band, across <strong>97 blind pages</strong></p>
+    </div>
+    <div class="figure">
+      <p class="figure-num">0</p>
+      <p class="figure-cap">false accepts — 8 of 8 accepted polygons were the <strong>right land</strong></p>
+    </div>
+    <div class="figure">
+      <p class="figure-num">95.6<span class="unit">%</span></p>
+      <p class="figure-cap">of London building heights <strong>measured</strong>, not modelled</p>
+    </div>
+    <div class="figure">
+      <p class="figure-num">268<span class="unit">ms</span></p>
+      <p class="figure-cap">per window against a <strong>1125&thinsp;ms</strong> hard real-time budget</p>
+    </div>
+  </div>
+</section>
 
 <main>
 
-  <!-- ============================ INTRO ============================ -->
-  <section id="about" aria-label="Introduction">
+  <!-- ======================= INTRO ======================= -->
+  <section class="intro wrap">
+    <p class="big">
+      Two of the systems below decide questions with legal consequences: whether a property
+      carries a planning condition that must be registered, and where on the national map an
+      application's site actually sits.
+    </p>
     <p>
-      Two of the systems below decide questions with legal consequences: whether a property carries a
-      planning condition that must be registered, and where on the national map an application's site
-      actually sits. Both run on thirty- and forty-year-old scans that the character recogniser reads
-      as <code>This copy has beenmade by orwith the authorityofthe StrategicDirectorof</code>.
-      Neither is allowed to be confidently wrong — so both quote their evidence, measure their own
-      confidence against hand-labelled truth, and hand the cases they cannot settle to a person.
+      Both run on thirty- and forty-year-old scans that the character recogniser reads as
+      <code>This copy has beenmade by orwith the authorityofthe StrategicDirectorof</code>.
+      Neither is allowed to be confidently wrong — so both quote their evidence, measure their
+      own confidence against hand-labelled truth, and hand the cases they cannot settle to a person.
     </p>
     <p>
       The same habit shows up where there are no legal stakes at all. I deleted a lyric-transcription
-      feature from a shipping macOS app after measuring it recognise <strong>exactly zero segments</strong>
-      of sung vocals, and rejected a CoreML backend after measuring it <strong>2.3&times; slower</strong>
-      than plain CPU. I would rather delete a feature than ship one I cannot defend with a number.
+      feature from a shipping macOS app after measuring it recognise exactly zero segments of sung
+      vocals, and rejected a CoreML backend after measuring it 2.3&times; slower than plain CPU.
+      I would rather delete a feature than ship one I cannot defend with a number.
     </p>
   </section>
 
-  <!-- ============================ SELECTED WORK ============================ -->
-  <section id="work">
-    <h2>Selected work</h2>
+  <!-- ======================= WORK ======================= -->
+  <section id="work" class="wrap">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <p class="section-sub">Five systems, each with the measurement that backs it.</p>
+    </div>
 
-    <!-- ---------- 1 ---------- -->
-    <article class="project">
-      <div class="project-head">
-        <h3>Reading the Paper Record</h3>
-        <p class="project-links">
-          <a href="https://planauditinge2e.geonarvis.com/">live demo</a>
-          <span class="sep">·</span>
-          <a href="https://jiaazhaoo.github.io/e2e-plan-auditing/">mirror</a>
+    <!-- 01 -->
+    <article class="card">
+      <div class="card-top">
+        <span class="card-idx">01</span>
+        <div>
+          <h3>Reading the Paper Record</h3>
+          <p class="card-kicker">Planning decisions → the legal register</p>
+        </div>
+        <p class="card-links">
+          <a href="https://planauditinge2e.geonarvis.com/">Live demo ↗</a>
         </p>
       </div>
-      <p class="lede">
-        When you buy a house in England the council must disclose the legal conditions attached to it —
-        that the garage may not become a shop, that the flats may not be occupied until the parking is
-        built. Those conditions were written on paper decades ago and most have never been anything
-        else. This workflow reads the scanned case file and answers one question per property:
-        <strong>does it carry a condition that must be registered?</strong> Get it wrong one way and a
-        buyer is not warned about a real restriction; get it wrong the other and a property is burdened
-        with one that does not exist.
+
+      <p class="card-lede">
+        When you buy a house in England the council must disclose the legal conditions attached to
+        it — that the garage may not become a shop, that the flats may not be occupied until the
+        parking is built. Those conditions were written on paper decades ago. This reads the scanned
+        case file and answers one question per property: <strong>does it carry a condition that must
+        be registered?</strong>
       </p>
-      <ul class="evidence">
-        <li><strong>Nothing counts unless it is quoted</strong>, and every quote is then searched for in
-          the recognised text. 22 of 23 verified against the scan; a verdict resting only on a rejected
-          quote is not allowed to stand.</li>
-        <li><strong>Two independent readers, never averaged.</strong> On one case the rules engine found
-          no registrable condition and would have cleared the property. The LLM found three, quoted each,
-          and every quote verified. The human reviewer had reached the same answer as the LLM.</li>
-        <li><strong>Being unsure is a result, not a failure.</strong> Where two readers disagreed on a
-          notice date, the field was marked single-sourced, its confidence dropped, and the discrepancy
-          raised on the case's check list — rather than one being silently picked.</li>
-        <li><strong>Confidence is computed, not asked for.</strong> Ask a model how confident it is and it
-          says 90–95 whether right or wrong. The grade here is built from checkable facts: did two readers
-          agree, was the wording visible on the page, was the condition read rather than inferred.</li>
-        <li><strong>Verdict and decision date match</strong> the delivered, human-reviewed result on both
-          demo cases.</li>
+
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">22/23</span><span class="stat-lab">quotes verified back against the scan</span></div>
+        <div class="stat"><span class="stat-num">2</span><span class="stat-lab">independent readers, never averaged</span></div>
+      </div>
+
+      <ul class="points">
+        <li><strong>Nothing counts unless it is quoted.</strong> The model is asked for the answer
+          <em>and the exact words it read it from</em>; every quote is then searched for in the
+          recognised text. A verdict resting only on a rejected quote cannot stand.</li>
+        <li><strong>Disagreement is never averaged away.</strong> On one case the rules engine found
+          no registrable condition and would have cleared the property. The LLM found three, quoted
+          each, and all verified — matching what the human reviewer had concluded.</li>
+        <li><strong>Confidence is computed, not asked for.</strong> Ask a model how confident it is
+          and it says 90–95 whether right or wrong. This grade is built from checkable facts: did two
+          readers agree, was the wording visible, was the condition read rather than inferred.</li>
       </ul>
-      <p class="stack">PP-OCRv5 (GPU) · DINOv2 page probe · rules engine + LLM cross-read · Python · Cloudflare Workers</p>
+
+      <p class="tags"><span>PP-OCRv5</span><span>DINOv2</span><span>rules engine + LLM</span><span>Python</span><span>Cloudflare Workers</span></p>
     </article>
 
-    <!-- ---------- 2 ---------- -->
-    <article class="project">
-      <div class="project-head">
-        <h3>Scan to Boundary</h3>
-        <p class="project-links">
-          <a href="https://planextracte2e.geonarvis.com/">live demo</a>
+    <!-- 02 -->
+    <article class="card">
+      <div class="card-top">
+        <span class="card-idx">02</span>
+        <div>
+          <h3>Scan to Boundary</h3>
+          <p class="card-kicker">Thirty years of scans → polygons on the national map</p>
+        </div>
+        <p class="card-links">
+          <a href="https://planextracte2e.geonarvis.com/">Live demo ↗</a>
         </p>
       </div>
-      <p class="lede">
-        A UK district council holds thirty years of planning applications as scans and nobody knows where
-        the sites are. This reads the scans, finds the plot the applicant drew in red, puts it on the
-        national map in British National Grid, and <strong>grades its own answer</strong> — so a person
-        only opens the cases it could not settle.
+
+      <p class="card-lede">
+        A UK district council holds thirty years of planning applications as scans and nobody knows
+        where the sites are. This reads the scans, finds the plot the applicant drew in red, puts it
+        on the national map in British National Grid, and <strong>grades its own answer</strong> — so
+        a person only opens the cases it could not settle.
       </p>
-      <ul class="evidence">
-        <li><strong>12 real cases end to end:</strong> 57 pages read, 20 plans found, 19 traced, 9 matched
-          to the map.</li>
-        <li><strong>Tracing: 88% correct</strong> in the top confidence band across 97 blind pages, scored
-          against boundaries drawn by hand. That band is the only one allowed to run without a person.</li>
-        <li><strong>Placement: 8 of 8 accepted polygons were the right land. Zero false accepts.</strong>
-          The one wrong placement was delivered as <code>unverified</code> — reported rather than asserted.</li>
-        <li><strong>Five models from three vendors, one typed contract.</strong> Each answers through a
-          schema and a malformed answer triggers a retry; three vote on where the plot is, and their
-          disagreement feeds a confidence model fitted on 58 labelled pages and validated on 97 held out.</li>
-        <li><strong>Checked against a system of record</strong> — addresses compared token by token with
-          the official register, and the drawing's own scale and north arrow used to match the plot at
-          real size and rotation before it counts.</li>
-        <li><strong>A nightly regression fails the build</strong> if any case drops a confidence band or
-          loses more than 0.05 of overlap against a committed baseline.</li>
+
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">88%</span><span class="stat-lab">top-band trace accuracy, 97 blind pages</span></div>
+        <div class="stat"><span class="stat-num">0</span><span class="stat-lab">false accepts on placement</span></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-lab">models, 3 vendors, one typed contract</span></div>
+      </div>
+
+      <ul class="points">
+        <li><strong>The uncertain case is reported, not asserted.</strong> Eight of eight accepted
+          polygons were the right land; the one wrong placement was delivered as
+          <code>unverified</code> with every rejected candidate drawn for the reviewer.</li>
+        <li><strong>Three models vote, and their disagreement is a feature.</strong> It feeds a
+          confidence model fitted on 58 labelled pages and validated on 97 held out. The top band is
+          the only one allowed to run without a person.</li>
+        <li><strong>A nightly regression fails the build</strong> if any case drops a confidence band
+          or loses more than 0.05 of overlap against a committed baseline.</li>
       </ul>
-      <p class="stack">PP-OCRv6 · YOLO · pydantic-ai / OpenRouter · OS NGD &amp; MasterMap · shapely / pyproj · Cloudflare Workers</p>
+
+      <p class="tags"><span>PP-OCRv6</span><span>YOLO</span><span>pydantic-ai</span><span>OS NGD &amp; MasterMap</span><span>shapely / pyproj</span></p>
     </article>
 
-    <!-- ---------- 3 ---------- -->
-    <article class="project">
-      <div class="project-head">
-        <h3>London Building Function</h3>
-        <p class="project-links">
-          <a href="https://londonbuildingfunction.geonarvis.com/">live map</a>
+    <!-- 03 -->
+    <article class="card">
+      <div class="card-top">
+        <span class="card-idx">03</span>
+        <div>
+          <h3>London Building Function</h3>
+          <p class="card-kicker">Every footprint in London, with its evidence</p>
+        </div>
+        <p class="card-links">
+          <a href="https://londonbuildingfunction.geonarvis.com/">Live map ↗</a>
         </p>
       </div>
-      <p class="lede">
-        Every building footprint in London with an inferred use, a height, and the evidence behind both —
-        built <strong>entirely from free and open data</strong>, deliberately: no OS Places after the
-        trial, no AddressBase, no Google Places, no commercial POI or footfall feed. The constraint is
+
+      <p class="card-lede">
+        Every building footprint in London with an inferred use, a height, and the evidence behind
+        both — built <strong>entirely from free and open data</strong>, deliberately: no OS Places
+        after the trial, no AddressBase, no Google Places, no commercial POI feed. The constraint is
         the point; it is what makes the result reproducible by anyone.
       </p>
-      <ul class="evidence">
-        <li><strong>95.64% of heights measured or surveyed</strong> from Environment Agency LiDAR, 0.05%
-          modelled. Everything else is labelled as fallback rather than passed off as measured.</li>
-        <li><strong>Use is stacked evidence, not a single source</strong> — OSM tags, OS Open UPRN counts,
-          footprint area, LiDAR height, Food Standards Agency records, POI and retail-centre boundaries,
-          energy certificates. Each join carries its own confidence, and a weaker join is never allowed to
+
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">95.64%</span><span class="stat-lab">heights measured or surveyed from LiDAR</span></div>
+        <div class="stat"><span class="stat-num">0.05%</span><span class="stat-lab">modelled — the rest labelled as fallback</span></div>
+      </div>
+
+      <ul class="points">
+        <li><strong>Use is stacked evidence, not one source.</strong> OSM tags, UPRN counts, footprint
+          area, LiDAR height, Food Standards Agency records, POI and retail-centre boundaries, energy
+          certificates — each join carries its own confidence, and a weaker join is never allowed to
           override a stronger one.</li>
-        <li><strong>One café inside an office block stays a café.</strong> Tenant activity is kept separate
-          from a building's primary use, so a single contained record cannot rewrite the whole building.</li>
-        <li>A per-building <strong>“personality” layer</strong> — dominant use, ground- and upper-floor
-          signal, street context, and the evidence and caveats that produced them.</li>
+        <li><strong>One café inside an office block stays a café.</strong> Tenant activity is kept
+          separate from a building's primary use, so a single contained record cannot rewrite the
+          whole building.</li>
       </ul>
-      <p class="stack">MapLibre · tippecanoe vector tiles · TypeScript / Vite · Node ETL · OS Open UPRN · EA LiDAR</p>
+
+      <p class="tags"><span>MapLibre</span><span>tippecanoe</span><span>TypeScript / Vite</span><span>Node ETL</span><span>EA LiDAR</span></p>
     </article>
 
-    <!-- ---------- 4 ---------- -->
-    <article class="project">
-      <div class="project-head">
-        <h3>karanow</h3>
-        <p class="project-links">
-          <a href="https://karanow.com">karanow.com</a>
-          <span class="sep">·</span>
-          <span class="muted">macOS app, shipped</span>
+    <!-- 04 -->
+    <article class="card">
+      <div class="card-top">
+        <span class="card-idx">04</span>
+        <div>
+          <h3>karanow</h3>
+          <p class="card-kicker">Real-time AI karaoke for macOS — shipped, alone</p>
+        </div>
+        <p class="card-links">
+          <a href="https://karanow.com">karanow.com ↗</a>
         </p>
       </div>
-      <p class="lede">
-        Any audio playing on a Mac, turned into an instrumental in real time, with synced lyrics and a
-        pitch track. A re-exported 1.5-second low-latency HTDemucs runs under a <strong>hard real-time
+
+      <p class="card-lede">
+        Any audio playing on a Mac, turned into an instrumental in real time, with synced lyrics and
+        a pitch track. A re-exported 1.5-second HTDemucs runs under a <strong>hard real-time
         budget</strong>: 1.125 seconds of audio must be separated every 1.125 seconds, or the backing
         track breaks. This is the project where I had to be right about performance, not hopeful.
       </p>
-      <ul class="evidence">
-        <li><strong>268 ms per window against a 1125 ms budget</strong> on an M2 Max — 24% used, four
-          times the headroom. The app reports the figure to the user so they can see what their own
-          machine is doing.</li>
-        <li><strong>CoreML rejected after measuring it, not after assuming it:</strong> 2.3&times; slower
-          than the CPU backend (622 ms vs 268 ms), because only 1072 of the graph's 1291 operators were
-          supported and it fragmented into 98 partitions.</li>
-        <li><strong>Idle CPU 40–60% → 1.5%</strong>, by noticing that a published property notifies
-          whether or not the value actually changed. <strong>AppleScript on the main thread 55% → 0%</strong>,
-          by moving player queries onto a serial queue.</li>
-        <li><strong>11.5 million songs of lyrics</strong> folded out of a 233 GiB dump into a 1.36 GB
-          index plus 7.57 GB of packs the client fetches by byte range — because the index store caps at
-          10 GB and the text alone was 7.57 GB.</li>
-        <li><strong>Shipped end to end, alone:</strong> Developer ID signing and Apple notarisation,
-          OAuth through a Worker, Stripe billing in seven currencies, and Sparkle delta updates — a
-          <strong>509 KB patch</strong> against a 236 MB app, so a bug fix does not re-download the model.</li>
-        <li><strong>Features deleted after measurement.</strong> Speech recognition transcribed test
-          speech at 0.927 confidence and returned <strong>zero segments</strong> on ninety seconds of
-          sung vocals, so that feature is gone. A per-feature lifetime unlock was withdrawn before anyone
-          bought one, because “forever” is the wrong promise on a cost that recurs.</li>
+
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">24%</span><span class="stat-lab">of the real-time budget used — 4× headroom</span></div>
+        <div class="stat"><span class="stat-num">40% → 1.5%</span><span class="stat-lab">idle CPU, after one root cause</span></div>
+        <div class="stat"><span class="stat-num">509 KB</span><span class="stat-lab">update patch against a 236 MB app</span></div>
+      </div>
+
+      <ul class="points">
+        <li><strong>CoreML rejected after measuring it, not after assuming it:</strong> 2.3&times;
+          slower than the CPU backend, because only 1072 of the graph's 1291 operators were supported
+          and it fragmented into 98 partitions.</li>
+        <li><strong>11.5 million songs of lyrics</strong> folded out of a 233&nbsp;GiB dump into a
+          1.36&nbsp;GB index plus packs the client fetches by byte range — because the index store
+          caps at 10&nbsp;GB and the text alone was 7.57&nbsp;GB.</li>
+        <li><strong>Shipped end to end:</strong> Developer ID signing and Apple notarisation, OAuth
+          through a Worker, Stripe billing in seven currencies, and Sparkle delta updates so a bug fix
+          does not re-download the model.</li>
       </ul>
-      <p class="stack">Swift / SwiftUI · ONNX Runtime · Core Audio · Cloudflare Workers + D1 + R2 · Stripe · Sparkle</p>
+
+      <p class="tags"><span>Swift / SwiftUI</span><span>ONNX Runtime</span><span>Core Audio</span><span>Workers + D1 + R2</span><span>Stripe</span></p>
     </article>
 
-    <!-- ---------- 5 ---------- -->
-    <article class="project">
-      <div class="project-head">
-        <h3>briffy</h3>
-        <p class="project-links">
-          <a href="https://github.com/jiaazhaoo/briffy">source</a>
+    <!-- 05 -->
+    <article class="card">
+      <div class="card-top">
+        <span class="card-idx">05</span>
+        <div>
+          <h3>briffy</h3>
+          <p class="card-kicker">A desktop app that remembers your day, locally</p>
+        </div>
+        <p class="card-links">
+          <a href="https://github.com/jiaazhaoo/briffy">Source ↗</a>
         </p>
       </div>
-      <p class="lede">
-        A desktop app that writes down what you saw, heard and were handed — screenshots, voice notes,
-        clipboard, files — without asking you to file any of it. Recognition runs on your own machine:
+
+      <p class="card-lede">
+        Writes down what you saw, heard and were handed — screenshots, voice notes, clipboard, files —
+        without asking you to file any of it. Recognition runs on your own machine:
         <strong>a picture is never sent to a model.</strong>
       </p>
-      <ul class="evidence">
-        <li>PP-OCRv6 and Whisper both run on-device through onnxruntime; search and retrieval work fully
-          offline, with cloud models used only for titles and daily recaps.</li>
-        <li>Exact and semantic search over everything captured, with speaker separation on voice notes and
-          automatic daily summaries.</li>
-        <li>Source-available under PolyForm Noncommercial; four interchangeable model providers so no
-          single vendor is load-bearing.</li>
+
+      <ul class="points">
+        <li>PP-OCRv6 and Whisper both run on-device through onnxruntime; search and retrieval work
+          fully offline, with cloud models used only for titles and daily recaps.</li>
+        <li>Exact and semantic search over everything captured, with speaker separation on voice
+          notes. Four interchangeable model providers, so no single vendor is load-bearing.</li>
       </ul>
-      <p class="stack">Electron · Node.js · onnxruntime · PP-OCRv6 · Whisper</p>
+
+      <p class="tags"><span>Electron</span><span>Node.js</span><span>onnxruntime</span><span>PP-OCRv6</span><span>Whisper</span></p>
     </article>
   </section>
 
-  <!-- ============================ HOW I WORK ============================ -->
-  <section id="approach">
-    <h2>How I work</h2>
-    <ul class="principles">
-      <li><strong>A number, or it did not happen.</strong> Every claim on this page comes from a run I can
-        reproduce — held-out pages, blind labels, benchmarks, a committed baseline a nightly job checks
-        against.</li>
-      <li><strong>Uncertainty is an output, not an embarrassment.</strong> A workflow that says “I could
-        not settle this” is worth more than one that is right slightly more often and gives you no way to
-        tell which answers are the wrong ones.</li>
-      <li><strong>Models propose; deterministic code decides.</strong> Typed schemas at every boundary,
-        quotes checked back against the source, and a fixed decision order — so the answer can be explained
-        to somebody who does not trust language models at all.</li>
-      <li><strong>Deleting is a result.</strong> Three features in the work above were removed after
-        measurement. Each deletion is recorded with the measurement that justified it, so nobody
-        rediscovers the same dead end.</li>
-    </ul>
+  <!-- ======================= APPROACH ======================= -->
+  <section id="approach" class="wrap">
+    <div class="section-head">
+      <h2>How I work</h2>
+    </div>
+    <div class="grid-2">
+      <div class="tenet">
+        <h3>A number, or it did not happen.</h3>
+        <p>Every claim on this page comes from a run I can reproduce — held-out pages, blind labels,
+          benchmarks, a committed baseline a nightly job checks against.</p>
+      </div>
+      <div class="tenet">
+        <h3>Uncertainty is an output.</h3>
+        <p>A workflow that says “I could not settle this” is worth more than one that is right
+          slightly more often and gives you no way to tell which answers are the wrong ones.</p>
+      </div>
+      <div class="tenet">
+        <h3>Models propose; code decides.</h3>
+        <p>Typed schemas at every boundary, quotes checked back against the source, a fixed decision
+          order — so the answer can be explained to somebody who does not trust language models at all.</p>
+      </div>
+      <div class="tenet">
+        <h3>Deleting is a result.</h3>
+        <p>Three features in the work above were removed after measurement. Each deletion is recorded
+          with the measurement that justified it, so nobody rediscovers the same dead end.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- ============================ BACKGROUND ============================ -->
-  <section id="background">
-    <h2>Background</h2>
+  <!-- ======================= BACKGROUND ======================= -->
+  <section id="background" class="wrap">
+    <div class="section-head">
+      <h2>Background</h2>
+    </div>
     <ul class="cv">
       <li>
-        <span class="role"><strong data-todo>Role</strong>, RMSI UK</span>
+        <span class="role"><strong data-todo>Role</strong> · RMSI UK</span>
         <span class="date" data-todo>20XX — now</span>
       </li>
       <li>
-        <span class="role">MSc Geographic Data Science &amp; Spatial Analytics, University of Bristol</span>
+        <span class="role">MSc Geographic Data Science &amp; Spatial Analytics · University of Bristol</span>
         <span class="date" data-todo>20XX</span>
       </li>
     </ul>
-    <p class="section-note">
+    <p class="note">
       Around fourteen further repositories on
       <a href="https://github.com/jiaazhaoo?tab=repositories">GitHub</a> carry the
       <code>GDSSA-</code> prefix — the master's work. Among them: gradient boosting with engineered
-      spatial features, causal analysis of commuting decisions, spatial heterogeneity of housing prices,
-      placename NER with BERT, climate-model evaluation over Greenland, and a study of Airbnb
+      spatial features, causal analysis of commuting decisions, spatial heterogeneity of housing
+      prices, placename NER with BERT, climate-model evaluation over Greenland, and a study of Airbnb
       commercialisation that runs from its own data collector through to a mapped result.
     </p>
   </section>
 
-  <!-- ============================ BEYOND WORK ============================ -->
-  <section id="interests">
-    <h2>Beyond work</h2>
-    <p>
-      <strong>Building and automating things.</strong> I run my own n8n instance at home. Its workflows
-      are exported, sanitised of secrets and committed to git every day; full snapshots are GPG-encrypted
-      and pushed off-box, fourteen archives deep, and I have restored from them end to end to prove it
-      works. The key lives only on the host — nothing in that repository can be read without it. It is a
-      small thing, but it is the same instinct as the work above: automate it, then prove the automation
-      survives the day you need it.
-    </p>
-    <p>
-      <strong>Design.</strong> Not as decoration — as the part of the work where you find out whether
-      anyone can actually use it. In karanow that meant exactly one saturated element on screen at a
-      time, contrast checked against WCAG across all six theme-by-appearance combinations, and a rule
-      written into a test so a layout relationship cannot quietly break. When everybody misread a
-      horizontal slider labelled “vocal removal” as a volume control, the fix was not a better label:
-      it stopped being a slider and became six stepped blocks. A control that is read wrong is a
-      control that is built wrong.
-    </p>
+  <!-- ======================= BEYOND ======================= -->
+  <section id="interests" class="wrap">
+    <div class="section-head">
+      <h2>Beyond work</h2>
+    </div>
+    <div class="grid-2">
+      <div class="tenet">
+        <h3>Building &amp; automating</h3>
+        <p>I run my own n8n instance at home. Its workflows are exported, sanitised of secrets and
+          committed to git every day; full snapshots are GPG-encrypted and pushed off-box, fourteen
+          archives deep, and I have restored from them end to end to prove it works. The key lives
+          only on the host. Same instinct as the work above: automate it, then prove the automation
+          survives the day you need it.</p>
+      </div>
+      <div class="tenet">
+        <h3>Design</h3>
+        <p>Not as decoration — as the part where you find out whether anyone can use it. In karanow
+          that meant exactly one saturated element on screen at a time, contrast checked against WCAG
+          across all six theme-by-appearance combinations, and a layout rule written into a test so it
+          cannot quietly break. When everybody misread a slider labelled “vocal removal” as a volume
+          control, the fix was not a better label: it stopped being a slider.</p>
+      </div>
+    </div>
   </section>
 
 </main>
 
 <footer>
-  <p>
-    <a href="mailto:zhaojia789456@gmail.com">zhaojia789456@gmail.com</a>
-    <span class="sep">·</span>
-    <a href="https://github.com/jiaazhaoo">github.com/jiaazhaoo</a>
-  </p>
-  <p class="colophon">Last updated <span id="updated">2026</span>. Built by hand; no framework, no tracker.</p>
+  <div class="wrap footer-inner">
+    <p class="footer-name">Jia Zhao</p>
+    <p class="footer-links">
+      <a href="mailto:zhaojia789456@gmail.com">zhaojia789456@gmail.com</a>
+      <a href="https://github.com/jiaazhaoo">github.com/jiaazhaoo</a>
+    </p>
+    <p class="colophon">Last updated <span id="updated">2026</span>. Built by hand — no framework, no tracker.</p>
+  </div>
 </footer>
 
 <script src="script.js"></script>
