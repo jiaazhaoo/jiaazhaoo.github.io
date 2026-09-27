@@ -1,161 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jia Zhao — AI Workflow Builder</title>
-  <meta name="description" content="Jia Zhao — I build AI workflows and automations on top of a real data-engineering backbone. Selected work, stack, and background." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jia Zhao — AI Product Manager</title>
+  <meta name="description" content="Jia Zhao — AI product manager and builder in Reading, UK. Automation Lead (GIS) at RMSI; maker of briffy, karanow and Sunset Earth." />
+  <meta property="og:title" content="Jia Zhao — AI Product Manager" />
+  <meta property="og:description" content="AI products that hold up outside the demo." />
+  <meta property="og:image" content="https://jiaazhaoo.github.io/assets/avatar.jpg" />
+  <link rel="icon" href="assets/avatar.jpg" />
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
-  <!-- ===================== HEADER / IDENTITY ===================== -->
-  <header class="masthead">
-    <img class="avatar" src="assets/avatar.jpg" alt="Jia Zhao" onerror="this.style.display='none'" />
-    <div class="masthead-text">
-      <h1>Jia Zhao</h1>
-      <p class="tagline">
-        <!-- TODO: one-line identity. This is the whole pitch — keep it concrete. -->
-        I&nbsp;build <strong>AI workflows &amp; automations</strong> — agents, RAG systems, and document
-        pipelines — on top of a real <strong>data-engineering</strong> backbone, so they hold up on
-        messy, real-world data instead of just demos.
-      </p>
-      <nav class="links">
-        <a href="mailto:zhaojia789456@gmail.com">Email</a>
-        <a href="https://github.com/jiaazhaoo">GitHub</a>
-        <!-- TODO: add / remove links. LinkedIn + a résumé PDF are what interviewers click. -->
-        <a href="#" data-todo>LinkedIn</a>
-        <a href="#" data-todo>Résumé (PDF)</a>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#top">Jia</a>
+      <nav class="nav-links">
+        <a href="#top" data-nav="top" class="active">Home</a>
+        <a href="#projects" data-nav="projects">Projects</a>
+        <a href="#experience" data-nav="experience">Experience</a>
+        <button class="theme-btn" aria-label="Toggle theme">
+          <svg class="i-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- ===================== ABOUT ===================== -->
-    <section id="about">
-      <p>
-        <!-- TODO: 2–4 sentences, first person. Lead with what makes you different. -->
-        I&nbsp;design and ship AI-powered workflows that turn manual, document-heavy processes into
-        systems that run themselves. What sets my builds apart is the foundation underneath: an
-        <strong>actual data-engineering background</strong> — OCR pipelines, geospatial processing,
-        ETL — so the automations survive contact with dirty, inconsistent, production data.
-      </p>
-      <p>
-        <!-- TODO: optional — domain angle, what you're focused on, what you want to work on next. -->
-        My sweet spot is the <span data-todo>[planning / real-estate / GIS]</span> domain, where the
-        data is messy and the manual work is expensive. Right now I&nbsp;am focused on
-        <span data-todo>[current focus]</span>.
-      </p>
-    </section>
-
-    <!-- ===================== WHAT I BUILD ===================== -->
-    <section id="build">
-      <h2>What I build</h2>
-      <ul class="capabilities">
-        <!-- TODO: keep the ones that are true for you, cut the rest. -->
-        <li><strong>AI agents &amp; assistants</strong> — task-specific agents that read, decide, and act.</li>
-        <li><strong>RAG knowledge bases</strong> — chat over SOPs, policies, and internal documents.</li>
-        <li><strong>Document processing</strong> — OCR &amp; extraction from scans into clean, structured data.</li>
-        <li><strong>Geospatial &amp; data pipelines</strong> — ingest, normalize, and serve messy spatial data.</li>
-        <li><strong>Workflow automation</strong> — n8n / Make / Zapier flows that remove manual steps.</li>
-        <li><strong>Integrations</strong> — wiring LLMs into CRMs, databases, and existing tools.</li>
-      </ul>
-    </section>
-
-    <!-- ===================== STACK ===================== -->
-    <section id="stack">
-      <h2>Stack</h2>
-      <!-- TODO: prune to what you actually use. Badges are just text, no logos to load. -->
-      <div class="badges">
-        <span class="badge">n8n</span>
-        <span class="badge">Make</span>
-        <span class="badge">Zapier</span>
-        <span class="badge">Claude</span>
-        <span class="badge">OpenAI</span>
-        <span class="badge">LangChain</span>
-        <span class="badge">Python</span>
-        <span class="badge">Supabase</span>
-        <span class="badge">Postgres / PostGIS</span>
-        <span class="badge">GDAL</span>
-        <span class="badge" data-todo>…</span>
+  <main class="page" id="top">
+    <section class="block hero">
+      <div class="banner"><canvas id="banner" aria-label="Pixel-art horizon at golden hour"></canvas></div>
+      <div class="profile">
+        <img class="avatar" src="assets/avatar.jpg" alt="Jia Zhao" width="92" height="92" />
+        <div>
+          <h1 class="name">Jia Zhao</h1>
+          <p class="role"><span id="role">AI Product Manager.</span></p>
+          <p class="where">Reading, UK</p>
+        </div>
       </div>
     </section>
 
-    <!-- ===================== SELECTED WORK (case studies, outcome-first) ===================== -->
-    <section id="work">
-      <h2>Selected work</h2>
-      <p class="section-note">Framed by outcome, not tooling — the way an interviewer reads it.</p>
+    <div class="gap"></div>
 
-      <article class="project">
-        <h3>Document knowledge base for a <span data-todo>[org type]</span></h3>
-        <p>
-          <!-- TODO: 1) the pain, 2) what you built, 3) the result number. -->
-          Staff were searching hundreds of scanned SOPs and policy PDFs by hand. I&nbsp;built an
-          OCR&nbsp;→ RAG pipeline that made every document instantly searchable and answerable in
-          natural language.
-        </p>
-        <p class="metric"><strong data-todo>Search time cut ~50% · 15+ hours/week saved</strong></p>
-        <p class="stack">OCR · RAG · Python · <span data-todo>vector DB</span></p>
-      </article>
-
-      <article class="project">
-        <h3>Geospatial data pipeline</h3>
-        <p>
-          <!-- TODO -->
-          Fragmented municipal spatial datasets — mismatched projections, schemas, formats — were
-          unusable without days of manual cleanup. I&nbsp;built an ETL pipeline that normalizes and
-          serves them as clean, queryable layers.
-        </p>
-        <p class="metric"><strong data-todo>Processed [N] datasets · manual prep from days → minutes</strong></p>
-        <p class="stack">Python · PostGIS · GDAL · <span data-todo>…</span></p>
-      </article>
-
-      <article class="project">
-        <h3>Lead / intake automation</h3>
-        <p>
-          <!-- TODO: add or remove case studies freely. Every one should end in a number. -->
-          <span data-todo>[The manual process → what you automated → the outcome.]</span>
-        </p>
-        <p class="metric"><strong data-todo>[the result, in numbers]</strong></p>
-        <p class="stack"><span data-todo>n8n · Make · …</span></p>
-      </article>
-    </section>
-
-    <!-- ===================== EXPERIENCE ===================== -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul class="cv">
-        <!-- TODO: keep terse. Title + org + span; details live on the résumé PDF. -->
-        <li>
-          <span class="role" data-todo>Role, Organization</span>
-          <span class="date">2024 — now</span>
-        </li>
-        <li>
-          <span class="role" data-todo>Earlier role, Organization</span>
-          <span class="date">2022 — 2024</span>
-        </li>
+    <section class="block">
+      <h2 class="section-title">About</h2>
+      <ul class="about">
+        <li>I'm an <strong>AI Product Manager</strong> who builds. I turn messy, real-world workflows into AI products that hold up outside the demo.</li>
+        <li>At <strong>RMSI</strong> I lead automation for geospatial production, designing human-in-the-loop AI workflows where the model drafts, checks itself and flags edge cases for people to review.</li>
+        <li>Outside work I ship my own AI products, like briffy, karanow and Sunset Earth, and I volunteer as a bicycle mechanic.</li>
       </ul>
+      <div class="contact" id="contact"></div>
     </section>
 
-    <!-- ===================== INTERESTS (for the human across the table) ===================== -->
-    <section id="interests">
-      <h2>Beyond work</h2>
-      <p>
-        <!-- TODO: 1–2 sentences. Interviewers are people; give them something real to open with. -->
-        <span data-todo>[What you're into outside of building — a hobby, a side project, a thing you
-        nerd out on. Keep it genuine, one or two lines.]</span>
-      </p>
+    <div class="gap"></div>
+
+    <section class="block" id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects" id="project-grid"></div>
     </section>
+
+    <div class="gap"></div>
+
+    <section class="block" id="experience">
+      <h2 class="section-title">Experience</h2>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <div class="gap"></div>
+
+    <footer class="block footer">
+      <p>Designed &amp; built by <strong>Jia</strong> · layout inspired by <a href="https://samworks.vercel.app/" target="_blank" rel="noopener">Samiran De</a></p>
+      <p>© <span id="year">2026</span></p>
+    </footer>
   </main>
 
-  <footer>
-    <p>
-      <a href="mailto:zhaojia789456@gmail.com">zhaojia789456@gmail.com</a>
-      · <a href="https://github.com/jiaazhaoo">github.com/jiaazhaoo</a>
-    </p>
-    <p class="colophon">Last updated <span data-todo>2026</span>.</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <script src="main.js?v=3"></script>
 </body>
 </html>
