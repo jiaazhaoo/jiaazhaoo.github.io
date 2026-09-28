@@ -7,61 +7,81 @@ const PROFILE = {
   email: 'zhaojia789456@gmail.com',
 };
 
+// Order and wording follow the CV's "Built and Shipped" section.
+// None of these claims users: shipped means live and complete, not adopted.
 const PROJECTS = [
   {
-    name: 'briffy',
-    tagline: 'A notebook you don’t have to write or tidy.',
-    status: 'Live',
-    ribbon: 'Works offline',
-    desc: 'A desktop paperclip that files what you saw, heard and were handed. It reads text in screenshots, transcribes voice notes and finds any of it later, all on-device.',
-    tags: ['On-device OCR', 'Speech-to-text', 'MCP'],
-    image: 'assets/projects/briffy.jpg',
-    gradient: 'linear-gradient(135deg,#dbeafe,#93c5fd 55%,#3b82f6)',
-    live: 'https://briffy.cc',
-    repo: 'https://github.com/jiaazhaoo/briffy',
-  },
-  {
-    name: 'karanow',
-    tagline: 'Turn anything your Mac plays into a backing track.',
-    status: 'Live',
-    ribbon: 'Real-time, on-device',
-    desc: 'A local AI singing tool that removes vocals from any Mac audio in real time, with lyrics, a pitch runway and playback control.',
-    tags: ['Swift', 'HTDemucs', 'ONNX Runtime'],
-    image: 'assets/projects/karanow.jpg',
-    gradient: 'linear-gradient(135deg,#ffedd5,#fdba74 55%,#f97316)',
-    live: 'https://karanow.com',
-  },
-  {
-    name: 'RapidEO Copilot',
-    tagline: 'From a vague customer question to a traceable flood brief.',
-    status: 'Pilot',
-    ribbon: 'IoU 0.47 vs EMS',
-    desc: 'Flood extent from real Sentinel-1 SAR, deterministic GIS exposure over OpenStreetMap, and a constrained LLM that plans and narrates but never computes the numbers.',
-    tags: ['Sentinel-1', 'Computer Vision', 'LLM tools'],
-    image: 'assets/projects/rapideo.jpg',
-    gradient: 'linear-gradient(135deg,#e0f2fe,#7dd3fc 55%,#0284c7)',
-  },
-  {
     name: 'Sunset Earth',
-    tagline: 'Wherever it’s golden hour, right now.',
+    tagline: 'A good sunset, always on.',
     status: 'Live',
-    ribbon: '~150 live cams',
-    desc: 'Shows the live camera most likely to be in a good golden hour at this moment, picked by weather and distance to sunrise or sunset.',
+    ribbon: '~150 live cameras',
+    desc: 'Crawls the live cameras on YouTube and ranks them by weather and time of day, so a sunrise or sunset is always on screen. Rules place each camera first; a model is only called where the rules cannot.',
     tags: ['Next.js', 'Cloudflare Workers', 'D1'],
     image: 'assets/projects/sunset-earth.jpg',
     gradient: 'linear-gradient(135deg,#fde68a,#f9a8d4 55%,#a78bfa)',
     live: 'https://sunset-earth.com',
     repo: 'https://github.com/jiaazhaoo/sunset-earth',
   },
+  {
+    name: 'Briffy',
+    tagline: 'What happens on screen, turned into text on the machine.',
+    status: 'Live',
+    ribbon: 'On-device',
+    desc: 'Records what happens on the computer and turns multimodal input, from screenshots to voice notes, into text on-device, then serves it to other AI tools over MCP. Idle, it records nothing.',
+    tags: ['Multimodal', 'On-device', 'MCP'],
+    image: 'assets/projects/briffy.jpg',
+    gradient: 'linear-gradient(135deg,#dbeafe,#93c5fd 55%,#3b82f6)',
+    live: 'https://briffy.cc',
+    repo: 'https://github.com/jiaazhaoo/briffy',
+  },
+  {
+    name: 'Karanow',
+    tagline: 'Anything your Mac plays, without the vocals.',
+    status: 'Live',
+    ribbon: 'Real-time, on-device',
+    desc: 'Strips the vocals out of anything playing on a Mac in real time, with a deep-learning model running on the machine rather than in the cloud. Built to take payments end to end: trial, Stripe subscriptions, sign-in, notarised builds, auto-updates.',
+    tags: ['Swift', 'Deep learning', 'Stripe'],
+    image: 'assets/projects/karanow.jpg',
+    gradient: 'linear-gradient(135deg,#ffedd5,#fdba74 55%,#f97316)',
+    live: 'https://karanow.com',
+  },
+  {
+    name: 'FreshAir',
+    tagline: 'A second opinion that has not read the argument.',
+    status: 'Open source',
+    ribbon: 'Clean context',
+    desc: 'Brings an agent from a different model into a long AI session with clean context, to argue another angle. It gets the original ask and the current diff; the reasoning in between is withheld on purpose, because sending it buys agreement.',
+    tags: ['Coding agents', 'Context', 'Multi-model'],
+    visual: 'freshair',
+    gradient: 'linear-gradient(135deg,#dcfce7,#86efac 55%,#16a34a)',
+    repo: 'https://github.com/jiaazhaoo/freshair',
+  },
 ];
 
+// Mirrors the CV's Experience and Education sections, title for title and
+// figure for figure. The RMSI heading is the contractual title.
 const EXPERIENCE = [
-  { role: 'Automation Lead (GIS)', org: 'RMSI · Reading', when: 'Apr 2026 — now',
-    desc: 'Lead automation discovery across geospatial production and turn it into roadmaps and human-in-the-loop AI workflows.' },
-  { role: 'Data Engineer', org: 'RMSI · Reading', when: 'Aug 2025 — Apr 2026',
-    desc: 'Built the company’s first AI-assisted workflow for digitising historical planning documents, doubling delivery efficiency. Cut file access for 50+ users from about 60 s to 3 s.' },
-  { role: 'Bicycle Mechanic (Volunteer)', org: 'Bike for Good · Glasgow', when: 'Jan — Aug 2025' },
-  { role: 'Geographic Data Science', org: 'University of Bristol' },
+  { role: 'Project Lead', org: 'RMSI · Reading · AI automation team', when: 'Apr 2026 - Present',
+    points: [
+      'Automated over 60% of a fully manual geospatial audit, starting from its biggest bottleneck, with an LLM as the main node of the workflow.',
+      'Built the eval set from the team’s own signed-off work; it caught errors in that work, and now gates every change.',
+      'Scored confidence from rule agreement, data distribution and several models, not the model’s own say-so: 95% of what it sends to review really needed it.',
+      'Built an integration platform unprompted in 3 hours that cut cross-source data searches from a minute to 3 seconds; it went live the next day and underpins every delivery run.',
+      'Instrumented the platform, with consent, so the work itself produced the training data: the models it trains cost a quarter less and run twice as fast at 18% better accuracy.',
+    ] },
+  { role: 'Data Engineer', org: 'RMSI · Reading', when: 'Aug 2025 - Apr 2026',
+    points: [
+      'Dug into answers flagged as model mistakes and found most were documents only a person could decide; those now go to a person instead of back into the model.',
+      'Replaced exact text match with an LLM judge, chosen on cost and error rate together: false alarms fell from 4% to 1%, at $0.00035 a case.',
+    ] },
+  { role: 'Product Manager', org: 'Zhizhou Future Technology · Beijing', when: 'Sep 2022 - Aug 2023',
+    points: [
+      'Mined and answered a 9,000-member Discord for a consumer text-to-image product; the recurring problems set the build list, and repeat replies got automated.',
+      'Creators could not put what they wanted into a prompt, so shipped a two-click route to a finished image with no describing in it at all.',
+      'Built Google Analytics funnels to find where the homepage lost people, then rebuilt the entry around the biggest loss: click-through rose from 20% to 55%.',
+    ] },
+  { role: 'MSc Geographic Data Science and Spatial Analytics', org: 'University of Bristol', when: '2023 - 2024' },
+  { role: 'BEng Urban and Rural Planning', org: 'Central South University · Changsha', when: '2017 - 2022' },
 ];
 
 /* =========================================================
@@ -77,6 +97,16 @@ const ICONS = {
   globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>',
 };
 
+// FreshAir is a skill, not a page, so its card shows the mechanism instead.
+const VISUALS = {
+  freshair: `<div class="fa" aria-label="What FreshAir sends to the second model">
+    <p class="fa-h">Another vendor, no history</p>
+    <div class="fa-row"><span class="fa-ok">✓</span>The original ask</div>
+    <div class="fa-row"><span class="fa-ok">✓</span>The current diff</div>
+    <div class="fa-row fa-off"><span class="fa-no">✕</span>The reasoning in between</div>
+  </div>`,
+};
+
 function renderContact() {
   $('#contact').innerHTML = [
     ['GitHub', PROFILE.github, 'github'],
@@ -88,14 +118,14 @@ function renderContact() {
 
 function renderProjects() {
   $('#project-grid').innerHTML = PROJECTS.map((p) => {
-    const cls = p.status === 'Live' ? 'live' : p.status === 'Pilot' ? 'pilot' : '';
+    const cls = { Live: 'live', Pilot: 'pilot', 'Open source': 'oss' }[p.status] || '';
     const links = [
       p.live && `<a href="${p.live}" target="_blank" rel="noopener" aria-label="${esc(p.name)} website">${ICONS.globe}</a>`,
       p.repo && `<a href="${p.repo}" target="_blank" rel="noopener" aria-label="${esc(p.name)} on GitHub">${ICONS.github}</a>`,
     ].filter(Boolean).join('');
     return `<article class="project">
       <div class="shot" style="--g:${p.gradient}">${p.ribbon ? `<span class="ribbon">${esc(p.ribbon)}</span>` : ''}
-        <div class="shot-inner"><img src="${p.image}" alt="${esc(p.name)} screenshot" loading="lazy"></div></div>
+        <div class="shot-inner">${p.visual ? VISUALS[p.visual] : `<img src="${p.image}" alt="${esc(p.name)} screenshot" loading="lazy">`}</div></div>
       <div class="p-head"><h3 class="p-name">${esc(p.name)}</h3><span class="status ${cls}">${esc(p.status)}</span></div>
       <p class="p-tag">${esc(p.tagline)}</p>
       <p class="p-desc">${esc(p.desc)}</p>
@@ -108,7 +138,7 @@ function renderExperience() {
   $('#timeline').innerHTML = EXPERIENCE.map((e) => `<li>
     <div><div class="t-role">${esc(e.role)}</div><div class="t-org">${esc(e.org)}</div></div>
     <div class="t-when">${esc(e.when || '')}</div>
-    ${e.desc ? `<p class="t-desc">${esc(e.desc)}</p>` : ''}</li>`).join('');
+    ${e.points ? `<ul class="t-points">${e.points.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</li>`).join('');
 }
 
 // Letters blur in once on load.
