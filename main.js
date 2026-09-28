@@ -7,15 +7,15 @@ const PROFILE = {
   email: 'zhaojia789456@gmail.com',
 };
 
-// Order and wording follow the CV's "Built and Shipped" section.
+// Same four products as the CV, in the site's own words rather than its lines.
 // None of these claims users: shipped means live and complete, not adopted.
 const PROJECTS = [
   {
     name: 'Sunset Earth',
-    tagline: 'A good sunset, always on.',
+    tagline: 'Wherever it’s golden hour, right now.',
     status: 'Live',
     ribbon: '~150 live cameras',
-    desc: 'Crawls the live cameras on YouTube and ranks them by weather and time of day, so a sunrise or sunset is always on screen. Rules place each camera first; a model is only called where the rules cannot.',
+    desc: 'Opens on whichever live camera in the world is in golden hour right now, picked by the weather and the sun.',
     tags: ['Next.js', 'Cloudflare Workers', 'D1'],
     image: 'assets/projects/sunset-earth.jpg',
     gradient: 'linear-gradient(135deg,#fde68a,#f9a8d4 55%,#a78bfa)',
@@ -24,10 +24,10 @@ const PROJECTS = [
   },
   {
     name: 'Briffy',
-    tagline: 'What happens on screen, turned into text on the machine.',
+    tagline: 'A notebook you don’t have to write.',
     status: 'Live',
     ribbon: 'On-device',
-    desc: 'Records what happens on the computer and turns multimodal input, from screenshots to voice notes, into text on-device, then serves it to other AI tools over MCP. Idle, it records nothing.',
+    desc: 'Keeps what you saw, heard and were handed, reads it on your own machine, and hands it to your AI tools when they ask.',
     tags: ['Multimodal', 'On-device', 'MCP'],
     image: 'assets/projects/briffy.jpg',
     gradient: 'linear-gradient(135deg,#dbeafe,#93c5fd 55%,#3b82f6)',
@@ -36,10 +36,10 @@ const PROJECTS = [
   },
   {
     name: 'Karanow',
-    tagline: 'Anything your Mac plays, without the vocals.',
+    tagline: 'Sing along to anything your Mac plays.',
     status: 'Live',
     ribbon: 'Real-time, on-device',
-    desc: 'Strips the vocals out of anything playing on a Mac in real time, with a deep-learning model running on the machine rather than in the cloud. Built to take payments end to end: trial, Stripe subscriptions, sign-in, notarised builds, auto-updates.',
+    desc: 'Takes the vocals out of whatever is playing, live, with the model running on your Mac instead of in the cloud.',
     tags: ['Swift', 'Deep learning', 'Stripe'],
     image: 'assets/projects/karanow.jpg',
     gradient: 'linear-gradient(135deg,#ffedd5,#fdba74 55%,#f97316)',
@@ -47,10 +47,10 @@ const PROJECTS = [
   },
   {
     name: 'FreshAir',
-    tagline: 'A second opinion that has not read the argument.',
+    tagline: 'A second opinion that hasn’t read the argument.',
     status: 'Open source',
     ribbon: 'Clean context',
-    desc: 'Brings an agent from a different model into a long AI session with clean context, to argue another angle. It gets the original ask and the current diff; the reasoning in between is withheld on purpose, because sending it buys agreement.',
+    desc: 'Asks a model from another vendor to look at the work fresh: it sees what you asked for and what changed, never the reasoning that got there.',
     tags: ['Coding agents', 'Context', 'Multi-model'],
     visual: 'freshair',
     gradient: 'linear-gradient(135deg,#dcfce7,#86efac 55%,#16a34a)',
