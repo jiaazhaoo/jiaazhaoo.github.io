@@ -58,30 +58,14 @@ const PROJECTS = [
   },
 ];
 
-// Mirrors the CV's Experience and Education sections, title for title and
-// figure for figure. The RMSI heading is the contractual title.
+// A timeline, not the CV: titles and dates match it exactly, the detail
+// lives on the CV. The RMSI heading is the contractual title.
 const EXPERIENCE = [
-  { role: 'Project Lead', org: 'RMSI · Reading · AI automation team', when: 'Apr 2026 - Present',
-    points: [
-      'Automated over 60% of a fully manual geospatial audit, starting from its biggest bottleneck, with an LLM as the main node of the workflow.',
-      'Built the eval set from the team’s own signed-off work; it caught errors in that work, and now gates every change.',
-      'Scored confidence from rule agreement, data distribution and several models, not the model’s own say-so: 95% of what it sends to review really needed it.',
-      'Built an integration platform unprompted in 3 hours that cut cross-source data searches from a minute to 3 seconds; it went live the next day and underpins every delivery run.',
-      'Instrumented the platform, with consent, so the work itself produced the training data: the models it trains cost a quarter less and run twice as fast at 18% better accuracy.',
-    ] },
-  { role: 'Data Engineer', org: 'RMSI · Reading', when: 'Aug 2025 - Apr 2026',
-    points: [
-      'Dug into answers flagged as model mistakes and found most were documents only a person could decide; those now go to a person instead of back into the model.',
-      'Replaced exact text match with an LLM judge, chosen on cost and error rate together: false alarms fell from 4% to 1%, at $0.00035 a case.',
-    ] },
-  { role: 'Product Manager', org: 'Zhizhou Future Technology · Beijing', when: 'Sep 2022 - Aug 2023',
-    points: [
-      'Mined and answered a 9,000-member Discord for a consumer text-to-image product; the recurring problems set the build list, and repeat replies got automated.',
-      'Creators could not put what they wanted into a prompt, so shipped a two-click route to a finished image with no describing in it at all.',
-      'Built Google Analytics funnels to find where the homepage lost people, then rebuilt the entry around the biggest loss: click-through rose from 20% to 55%.',
-    ] },
-  { role: 'MSc Geographic Data Science and Spatial Analytics', org: 'University of Bristol', when: '2023 - 2024' },
-  { role: 'BEng Urban and Rural Planning', org: 'Central South University · Changsha', when: '2017 - 2022' },
+  { role: 'Project Lead', org: 'RMSI · AI automation team', when: 'Apr 2026 - Present' },
+  { role: 'Data Engineer', org: 'RMSI', when: 'Aug 2025 - Apr 2026' },
+  { role: 'Product Manager', org: 'Zhizhou Future Technology', when: 'Sep 2022 - Aug 2023' },
+  { role: 'MSc Geographic Data Science and Spatial Analytics', org: 'University of Bristol', when: '2024' },
+  { role: 'BEng Urban and Rural Planning', org: 'Central South University', when: '2022' },
 ];
 
 /* =========================================================
