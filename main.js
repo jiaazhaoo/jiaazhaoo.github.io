@@ -4,7 +4,7 @@
 const PROFILE = {
   github: 'https://github.com/jiaazhaoo',
   linkedin: 'https://www.linkedin.com/in/jiazhao-career/',
-  email: 'zhaojia789456@gmail.com',
+  email: 'zhaojia_pri@outlook.com',
 };
 
 // Same four products as the CV, in the site's own words rather than its lines.
