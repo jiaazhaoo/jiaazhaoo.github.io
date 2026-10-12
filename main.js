@@ -243,7 +243,10 @@ function renderExperience() {
 // Letters blur in once on load.
 function roleIn() {
   const el = $('#role');
-  el.innerHTML = [...el.textContent].map((c, j) => `<span class="ch" style="animation-delay:${j * 35}ms">${esc(c)}</span>`).join('');
+  // Letters animate inside whole words, so a line only breaks at a space
+  // and never starts with one.
+  let j = 0;
+  el.innerHTML = el.textContent.split(' ').map((w) => `<span class="word">${[...w].map((c) => `<span class="ch" style="animation-delay:${j++ * 35}ms">${esc(c)}</span>`).join('')}</span>`).join(' ');
 }
 
 /* ---------- Theme + scroll spy ---------- */
