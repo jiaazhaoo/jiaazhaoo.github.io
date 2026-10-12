@@ -66,19 +66,6 @@ const PROJECTS = [
   },
   {
     section: 'geospatial',
-    name: 'Georeferencing old survey sheets',
-    tagline: 'Survey of India sheets, 1914 to 1943, from library scan to map.',
-    status: 'Demo',
-    ribbon: 'Grid-anchored',
-    desc: 'Traces the printed grid and turns every crossing into a reference point, then matches roads, canals and villages against today’s map to set the final correction. No one places a point by hand.',
-    tags: ['Grid detection', 'Image matching', 'OpenStreetMap'],
-    image: 'assets/projects/geo-sheets.jpg',
-    visual: 'sheet',
-    gradient: 'linear-gradient(135deg,#fef3c7,#fcd34d 55%,#c06510)',
-    live: 'https://claude.ai/artifact/ArQFTvVibGbXjo2NNhwmng',
-  },
-  {
-    section: 'geospatial',
     name: 'Reading historical maps',
     tagline: 'Black-and-white plans, repainted so roads and buildings come apart.',
     status: 'Demo',
@@ -186,15 +173,6 @@ const VISUALS = {
     <div class="fa-kv"><span>Evidence</span>tags, addresses, height</div>
     <div class="fa-kv fa-not"><span>Can’t say</span>one shop’s use</div>
   </div>`,
-  sheet: `<svg class="geo" viewBox="0 0 400 260" preserveAspectRatio="xMinYMin slice" role="img" aria-label="An old survey sheet with every grid crossing marked as a reference point">
-    <rect width="400" height="260" fill="#f2e9d4"/>
-    <path d="M30 205 C 95 170, 150 228, 225 186 S 330 130, 400 158" fill="none" stroke="#6a9bc3" stroke-width="4" opacity=".75"/>
-    <path d="M40 60 L 120 120 L 205 108 L 310 175 L 400 190" fill="none" stroke="#9a6b3f" stroke-width="2.4" stroke-dasharray="7 4" opacity=".7"/>
-    <g fill="#9a6b3f" opacity=".55"><circle cx="160" cy="70" r="6"/><circle cx="262" cy="128" r="5"/><circle cx="95" cy="150" r="5"/></g>
-    <g stroke="#9c2589" stroke-width="1.4" opacity=".85"><line x1="55" y1="26" x2="55" y2="250"/><line x1="130" y1="26" x2="130" y2="250"/><line x1="205" y1="26" x2="205" y2="250"/><line x1="280" y1="26" x2="280" y2="250"/><line x1="355" y1="26" x2="355" y2="250"/><line x1="30" y1="40" x2="400" y2="40"/><line x1="30" y1="100" x2="400" y2="100"/><line x1="30" y1="160" x2="400" y2="160"/><line x1="30" y1="220" x2="400" y2="220"/></g>
-    <g fill="#c06510" stroke="#fff" stroke-width="1.5"><circle cx="55" cy="40" r="4.5"/><circle cx="55" cy="100" r="4.5"/><circle cx="55" cy="160" r="4.5"/><circle cx="55" cy="220" r="4.5"/><circle cx="130" cy="40" r="4.5"/><circle cx="130" cy="100" r="4.5"/><circle cx="130" cy="160" r="4.5"/><circle cx="130" cy="220" r="4.5"/><circle cx="205" cy="40" r="4.5"/><circle cx="205" cy="100" r="4.5"/><circle cx="205" cy="160" r="4.5"/><circle cx="205" cy="220" r="4.5"/><circle cx="280" cy="40" r="4.5"/><circle cx="280" cy="100" r="4.5"/><circle cx="280" cy="160" r="4.5"/><circle cx="280" cy="220" r="4.5"/><circle cx="355" cy="40" r="4.5"/><circle cx="355" cy="100" r="4.5"/><circle cx="355" cy="160" r="4.5"/><circle cx="355" cy="220" r="4.5"/></g>
-    <g font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#5b4a33"><text x="40" y="18">76°00′E</text><text x="118" y="18">05′</text><text x="193" y="18">10′</text><text x="2" y="44">30°30′</text></g>
-  </svg>`,
   plan: `<svg class="geo" viewBox="0 0 400 260" preserveAspectRatio="xMinYMin slice" role="img" aria-label="A hand-drawn plan with its road names, a house number and the north arrow read automatically">
     <rect width="400" height="260" fill="#fbfbf8"/>
     <g fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linecap="round">
