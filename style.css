@@ -155,6 +155,15 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .fa-kv { display: grid; grid-template-columns: 56px 1fr; gap: 6px; padding: 5px 8px; margin-bottom: 5px; border: 1px solid #e5e5e5; border-radius: 7px; background: #fafafa; white-space: nowrap; overflow: hidden; }
 .fa-kv span { font: 500 10px/1.5 var(--mono); color: #6b6b6b; text-transform: uppercase; }
 .fa-not { border-style: dashed; background: #fff; color: #a3a3a3; }
+/* Whole card is one link: the title's link stretches over the card, and
+   the small icon links sit above it so they still go to their own place. */
+.project { position: relative; }
+.card-link { color: inherit; text-decoration: none; }
+.card-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.card-link:focus-visible { outline: none; }
+.project:has(.card-link:focus-visible) { outline: 2px solid var(--fg); outline-offset: -2px; }
+.project:has(.card-link):hover .p-name { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+.p-links a { position: relative; z-index: 2; }
 .p-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-top: 16px; }
 .p-name { font: 600 19px/1.25 var(--sans); color: var(--fg); margin: 0; letter-spacing: -.01em; }
 .status { font-size: 13px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }

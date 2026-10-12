@@ -238,6 +238,7 @@ function renderProjects() {
   const cards = PROJECTS.filter((p) => p.section === grid.dataset.grid);
   grid.innerHTML = cards.map((p) => {
     const cls = { Live: 'live', 'In production': 'live', 'Open source': 'oss', Demo: 'demo', Shipped: 'shipped' }[p.status] || '';
+    const href = p.live || p.repo;
     const links = [
       p.live && `<a href="${p.live}" target="_blank" rel="noopener" aria-label="${esc(p.name)} website">${ICONS.globe}</a>`,
       p.repo && `<a href="${p.repo}" target="_blank" rel="noopener" aria-label="${esc(p.name)} on GitHub">${ICONS.github}</a>`,
@@ -245,7 +246,7 @@ function renderProjects() {
     return `<article class="project">
       <div class="shot" style="--g:${p.gradient}">${p.ribbon ? `<span class="ribbon">${esc(p.ribbon)}</span>` : ''}
         <div class="shot-inner">${p.visual ? VISUALS[p.visual] : ''}${p.image ? `<img src="${p.image}" alt="${esc(p.name)} screenshot" loading="lazy"${p.visual ? ' class="over" onerror="this.remove()"' : ''}>` : ''}</div></div>
-      <div class="p-head"><h3 class="p-name">${esc(p.name)}</h3><span class="status ${cls}">${esc(p.status)}</span></div>
+      <div class="p-head"><h3 class="p-name">${href ? `<a class="card-link" href="${href}" target="_blank" rel="noopener">${esc(p.name)}</a>` : esc(p.name)}</h3><span class="status ${cls}">${esc(p.status)}</span></div>
       <p class="p-tag">${esc(p.tagline)}</p>
       <p class="p-desc">${esc(p.desc)}</p>
       <div class="p-foot"><div class="chips">${p.tags.map((t) => `<span class="chip">${esc(t)}</span>`).join('')}</div><div class="p-links">${links}</div></div>
