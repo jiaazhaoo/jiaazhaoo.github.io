@@ -99,10 +99,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .section-title + * { margin-top: 26px; }
 
 /* ---------- Hero ---------- */
-.hero { padding-top: 0; }
-.banner { margin: 0 -16px; border-bottom: 1px dashed var(--line); overflow: hidden; line-height: 0; }
-#banner { width: 100%; height: auto; aspect-ratio: 204 / 54; image-rendering: pixelated; display: block; }
-.profile { display: flex; gap: 20px; align-items: center; padding-top: 18px; }
+.hero { padding-top: 28px; padding-bottom: 28px; }
+.profile { display: flex; gap: 20px; align-items: center; }
 .avatar {
   width: 92px; height: 92px; border-radius: 12px; flex: none; object-fit: cover;
   border: 3px solid var(--line-strong); box-shadow: 0 0 0 1px var(--line);
@@ -154,6 +152,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .fa-ok { background: #16a34a; }
 .fa-no { background: #a3a3a3; }
 .fa-off { color: #a3a3a3; text-decoration: line-through; text-decoration-color: #d4d4d4; background: #fff; border-style: dashed; }
+.fa-kv { display: grid; grid-template-columns: 56px 1fr; gap: 6px; padding: 5px 8px; margin-bottom: 5px; border: 1px solid #e5e5e5; border-radius: 7px; background: #fafafa; white-space: nowrap; overflow: hidden; }
+.fa-kv span { font: 500 10px/1.5 var(--mono); color: #6b6b6b; text-transform: uppercase; }
+.fa-not { border-style: dashed; background: #fff; color: #a3a3a3; }
 .p-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-top: 16px; }
 .p-name { font: 600 19px/1.25 var(--sans); color: var(--fg); margin: 0; letter-spacing: -.01em; }
 .status { font-size: 13px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
@@ -161,6 +162,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .status.live::before { background: var(--live); box-shadow: 0 0 0 3px color-mix(in srgb, var(--live) 22%, transparent); }
 .status.pilot::before { background: #f59e0b; }
 .status.oss::before { background: #60a5fa; }
+.status.shipped::before { background: #a78bfa; }
 .p-tag { font-size: 13px; color: var(--muted); margin: 2px 0 0; }
 .p-desc { font-size: 14.5px; color: var(--muted); margin: 14px 0 16px; flex: 1; }
 .p-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; }

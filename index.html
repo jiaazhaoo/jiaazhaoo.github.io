@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
   <header class="nav">
@@ -23,8 +23,9 @@
       <a class="logo" href="#top">Jamie</a>
       <nav class="nav-links">
         <a href="#top" data-nav="top" class="active">Home</a>
-        <a href="#projects" data-nav="projects">Projects</a>
-        <a href="#experience" data-nav="experience">Experience</a>
+        <a href="#ai" data-nav="ai">AI</a>
+        <a href="#geospatial" data-nav="geospatial">Geospatial</a>
+        <a href="#product" data-nav="product">Product</a>
         <button class="theme-btn" aria-label="Toggle theme">
           <svg class="i-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
           <svg class="i-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -35,7 +36,6 @@
 
   <main class="page" id="top">
     <section class="block hero">
-      <div class="banner"><canvas id="banner" aria-label="Pixel-art horizon at golden hour"></canvas></div>
       <div class="profile">
         <img class="avatar" src="assets/avatar.jpg" alt="Jamie (Jia) Zhao" width="92" height="92" />
         <div>
@@ -52,18 +52,43 @@
       <h2 class="section-title">About</h2>
       <ul class="about">
         <li>I work on AI product and automation, and for two years on the same question: <strong>what a person should not have to do.</strong></li>
-        <li>On a consumer AI creation product, I replaced describing what you want with two clicks, and 27% of existing users adopted it.</li>
         <li>At <strong>RMSI</strong> I lead the AI automation team. I automate what is simple and tedious for an engineering team, and turn the rest into a quality report reviewed in bands rather than one by one. The evals I design measure how far the AI can be trusted, and where its responsibility ends.</li>
-        <li>Alongside, I build my own products, with coding agents doing the typing. I have also volunteered as a bicycle mechanic in Glasgow.</li>
+        <li>Alongside, I build my own products, with coding agents doing the typing.</li>
       </ul>
       <div class="contact" id="contact"></div>
     </section>
 
     <div class="gap"></div>
 
-    <section class="block" id="projects">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects" id="project-grid"></div>
+    <section class="block" id="interests">
+      <h2 class="section-title">Interests</h2>
+      <ul class="about">
+        <li><strong>Building and automating.</strong> My products started as things I wanted for myself.</li>
+        <li><strong>Design.</strong> Making a tool obvious enough that nobody has to explain it.</li>
+        <li><strong>AI’s boundaries.</strong> Where a model’s responsibility should end, and how robust it stays near that line.</li>
+        <li><strong>Bikes.</strong> I volunteered as a bicycle mechanic at Bike for Good in Glasgow.</li>
+      </ul>
+    </section>
+
+    <div class="gap"></div>
+
+    <section class="block" id="ai">
+      <h2 class="section-title">AI</h2>
+      <div class="projects" data-grid="ai"></div>
+    </section>
+
+    <div class="gap"></div>
+
+    <section class="block" id="geospatial">
+      <h2 class="section-title">Geospatial</h2>
+      <div class="projects" data-grid="geospatial"></div>
+    </section>
+
+    <div class="gap"></div>
+
+    <section class="block" id="product">
+      <h2 class="section-title">Product</h2>
+      <div class="projects" data-grid="product"></div>
     </section>
 
     <div class="gap"></div>
@@ -81,6 +106,6 @@
     </footer>
   </main>
 
-  <script src="main.js?v=4"></script>
+  <script src="main.js?v=5"></script>
 </body>
 </html>
