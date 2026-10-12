@@ -59,6 +59,7 @@ const PROJECTS = [
     ribbon: 'No hand-picked points',
     desc: 'Reads road names, house numbers and the north arrow on a scanned plan to place it roughly, then matches it against Ordnance Survey line work to land it on the British National Grid.',
     tags: ['OCR', 'Vision model', 'Image matching'],
+    image: 'assets/projects/geo-plans.jpg',
     visual: 'plan',
     gradient: 'linear-gradient(135deg,#fae8ff,#e9a8de 55%,#9c2589)',
     live: 'https://claude.ai/artifact/GBMNX2kvqi3mhaf5uH76je',
@@ -71,6 +72,7 @@ const PROJECTS = [
     ribbon: 'Grid-anchored',
     desc: 'Traces the printed grid and turns every crossing into a reference point, then matches roads, canals and villages against today’s map to set the final correction. No one places a point by hand.',
     tags: ['Grid detection', 'Image matching', 'OpenStreetMap'],
+    image: 'assets/projects/geo-sheets.jpg',
     visual: 'sheet',
     gradient: 'linear-gradient(135deg,#fef3c7,#fcd34d 55%,#c06510)',
     live: 'https://claude.ai/artifact/ArQFTvVibGbXjo2NNhwmng',
@@ -78,14 +80,15 @@ const PROJECTS = [
   {
     section: 'geospatial',
     name: 'Reading historical maps',
-    tagline: 'Features on old maps, found and outlined automatically.',
+    tagline: 'Black-and-white plans, repainted so roads and buildings come apart.',
     status: 'Demo',
     ribbon: 'Fully automatic',
-    desc: 'Recognises the features drawn on scanned historical maps and segments them into clean outlines, with no one tracing them by hand.',
-    tags: ['Recognition', 'Segmentation', 'Historical maps'],
+    desc: 'An image model repaints old black-and-white plans in Ordnance Survey colours and marks the roads in red, so roads and buildings separate by colour alone, with no one tracing them by hand.',
+    tags: ['Image model', 'Segmentation', 'Historical maps'],
+    image: 'assets/projects/geo-colour.jpg',
     visual: 'segment',
     gradient: 'linear-gradient(135deg,#ecfccb,#bef264 55%,#4d7c0f)',
-    // TODO: link to come.
+    live: 'https://claude.ai/artifact/JKYX9ZJKauksAVUcdEg4cv',
   },
   {
     section: 'geospatial',
@@ -95,6 +98,7 @@ const PROJECTS = [
     ribbon: 'Open data only',
     desc: 'The open sources disagree on what even counts as a building, so every measure has a written contract: what it means, the evidence behind it, and what it cannot tell you.',
     tags: ['MapLibre', 'LiDAR', 'Open data'],
+    image: 'assets/projects/atlas.jpg',
     visual: 'atlas',
     gradient: 'linear-gradient(135deg,#e0f2fe,#7dd3fc 55%,#0284c7)',
     live: 'https://londonbuildingfunction.geonarvis.com',
@@ -240,7 +244,7 @@ function renderProjects() {
     ].filter(Boolean).join('');
     return `<article class="project">
       <div class="shot" style="--g:${p.gradient}">${p.ribbon ? `<span class="ribbon">${esc(p.ribbon)}</span>` : ''}
-        <div class="shot-inner">${p.visual ? VISUALS[p.visual] : `<img src="${p.image}" alt="${esc(p.name)} screenshot" loading="lazy">`}</div></div>
+        <div class="shot-inner">${p.visual ? VISUALS[p.visual] : ''}${p.image ? `<img src="${p.image}" alt="${esc(p.name)} screenshot" loading="lazy"${p.visual ? ' class="over" onerror="this.remove()"' : ''}>` : ''}</div></div>
       <div class="p-head"><h3 class="p-name">${esc(p.name)}</h3><span class="status ${cls}">${esc(p.status)}</span></div>
       <p class="p-tag">${esc(p.tagline)}</p>
       <p class="p-desc">${esc(p.desc)}</p>
