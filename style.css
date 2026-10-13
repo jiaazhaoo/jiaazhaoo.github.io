@@ -165,7 +165,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .project:has(.card-link:focus-visible) { outline: 2px solid var(--fg); outline-offset: -2px; }
 .project:has(.card-link):hover .p-name { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
 .p-links a { position: relative; z-index: 2; }
-.p-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-top: 16px; }
+.p-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 8px; margin-top: 16px; }
+.p-name { min-width: 0; }
 .p-name { font: 600 19px/1.25 var(--sans); color: var(--fg); margin: 0; letter-spacing: -.01em; }
 .status { font-size: 13px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
 .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--faint); }
@@ -213,10 +214,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
   .nav-links { gap: 14px; font-size: 13px; }
-}
-@media (max-width: 360px) {
-  .logo { font-size: 21px; }
-  .nav-links { gap: 9px; font-size: 12px; }
   .projects { grid-template-columns: 1fr; }
   .project:nth-child(odd) { border-right: 0; }
   .project:nth-last-child(-n + 2):nth-child(odd) { border-bottom: 1px dashed var(--line); }
@@ -227,6 +224,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .profile { gap: 14px; }
   .timeline li { grid-template-columns: 1fr; }
   .t-when { text-align: left; }
+}
+@media (max-width: 360px) {
+  .logo { font-size: 21px; }
+  .nav-links { gap: 9px; font-size: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; transition: none !important; }

@@ -26,6 +26,19 @@ const PROJECTS = [
   },
   {
     section: 'ai',
+    name: 'AI-Augmented Geospatial Auditing',
+    tagline: 'Watch how the expert works, then make every step a benchmark.',
+    status: 'Demo',
+    ribbon: 'Learns from experts',
+    desc: 'Records how an expert audits across AWS, QGIS and the browser; what they read closely and where they focus on the map shows what matters. Each step becomes a benchmark and a sub-workflow, code first and AI only when the code fails, and one board develops, tests and runs them, gated on the benchmark, with people approving.',
+    tags: ['Benchmarks', 'Agents', 'Human in the loop'],
+    image: 'assets/projects/expert-audit.jpg',
+    visual: 'expert',
+    gradient: 'linear-gradient(135deg,#ccfbf1,#5eead4 55%,#17717a)',
+    live: 'https://claude.ai/artifact/9qPdducA2ampUW59hznzye',
+  },
+  {
+    section: 'ai',
     name: 'Briffy',
     tagline: 'Multimodal input, turned into text on the machine.',
     status: 'Live',
@@ -51,6 +64,19 @@ const PROJECTS = [
   },
 
   // ---------- Geospatial ----------
+  {
+    section: 'geospatial',
+    name: 'AI-Augmented Geospatial Auditing',
+    tagline: 'An analyst’s audit, turned into reusable geospatial steps.',
+    status: 'Demo',
+    ribbon: 'Code first, AI on failure',
+    desc: 'Geocodes the record, reads the plan’s road names and north arrow, selects the parcel by its topology (touches this road, east of that house) and snaps it to the plot edge. Address APIs go first; when all of them fail, AI investigates public sources.',
+    tags: ['QGIS', 'Spatial queries', 'Georeferencing'],
+    image: 'assets/projects/expert-audit.jpg',
+    visual: 'expert',
+    gradient: 'linear-gradient(135deg,#ccfbf1,#5eead4 55%,#17717a)',
+    live: 'https://claude.ai/artifact/9qPdducA2ampUW59hznzye',
+  },
   {
     section: 'geospatial',
     name: 'Georeferencing bad plans',
@@ -195,6 +221,12 @@ const VISUALS = {
     <g fill="#c06510" stroke="#fff" stroke-width="1.5"><circle cx="55" cy="40" r="4.5"/><circle cx="55" cy="100" r="4.5"/><circle cx="55" cy="160" r="4.5"/><circle cx="55" cy="220" r="4.5"/><circle cx="130" cy="40" r="4.5"/><circle cx="130" cy="100" r="4.5"/><circle cx="130" cy="160" r="4.5"/><circle cx="130" cy="220" r="4.5"/><circle cx="205" cy="40" r="4.5"/><circle cx="205" cy="100" r="4.5"/><circle cx="205" cy="160" r="4.5"/><circle cx="205" cy="220" r="4.5"/><circle cx="280" cy="40" r="4.5"/><circle cx="280" cy="100" r="4.5"/><circle cx="280" cy="160" r="4.5"/><circle cx="280" cy="220" r="4.5"/><circle cx="355" cy="40" r="4.5"/><circle cx="355" cy="100" r="4.5"/><circle cx="355" cy="160" r="4.5"/><circle cx="355" cy="220" r="4.5"/></g>
     <g font-family="ui-monospace,Menlo,monospace" font-size="12" fill="#5b4a33"><text x="40" y="18">76°00′E</text><text x="118" y="18">05′</text><text x="193" y="18">10′</text><text x="2" y="44">30°30′</text></g>
   </svg>`,
+  expert: `<div class="fa" aria-label="Record, benchmark, generate, run">
+    <p class="fa-h">From the expert’s workflow</p>
+    <div class="fa-row"><span class="fa-ok">1</span>Record every step</div>
+    <div class="fa-row"><span class="fa-ok">2</span>Benchmark each step</div>
+    <div class="fa-row"><span class="fa-ok">3</span>Generate sub-workflows</div>
+  </div>`,
   plan: `<svg class="geo" viewBox="0 0 400 260" preserveAspectRatio="xMinYMin slice" role="img" aria-label="A hand-drawn plan with its road names, a house number and the north arrow read automatically">
     <rect width="400" height="260" fill="#fbfbf8"/>
     <g fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linecap="round">
